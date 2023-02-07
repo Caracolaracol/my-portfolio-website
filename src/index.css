@@ -8,6 +8,19 @@
   font-weight: normal;
 }
 @font-face {
+  font-family: 'TommyLight';
+  src: url('./assets/fonts/MADE Tommy Soft Light PERSONAL USE.otf') format('opentype');
+
+}
+@font-face {
+  font-family: 'TommyRegular';
+  src: url('./assets/fonts/MADE Tommy Soft Regular PERSONAL USE.otf') format('opentype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+
+@font-face {
   font-family: 'ChronoType';
   src: url('./assets/fonts/ChronoType.ttf') format('truetype');
   font-style: normal;
@@ -57,4 +70,5 @@
     55% { opacity:0; }
     100% { opacity:0; }
   }
+
 }

@@ -8,7 +8,9 @@ module.exports = {
     extend: {
       fontFamily: {
         tommy: ['Tommy'],
-        chrono: ['ChronoType']
+        chrono: ['ChronoType'],
+        tommylight: ['TommyLight'],
+        tommyregular: ['TommyRegular']
       }
     },
     colors: {
