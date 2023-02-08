@@ -1,0 +1,9 @@
+.mainpage {
+    animation: showpage  450ms ease-in;
+}
+
+
+@keyframes showpage {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
