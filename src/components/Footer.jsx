@@ -2,7 +2,7 @@ import logo2 from '../assets/logo1.png'
 
 function Footer() {
     return (
-        <div className='ml-[2%] h-[7rem] absolute bottom-0 w-[85%]'>
+        <div className='ml-[2%] h-[4rem] tablet:h-[4.2rem] absolute bottom-0 w-[85%]'>
             <footer className='flex h-[4rem] justify-between' >
                 <div>
                     <p></p>
