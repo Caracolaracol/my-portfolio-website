@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { createContext} from "react";
 import { useState } from "react";
 
@@ -8,22 +8,9 @@ const { Provider } = GeneralContext
 
 function MyProvider({children}) {
     const [isEntered, setIsEntered] = useState(false)
-    function enterHandler(){
-        if(isEntered == false){
-            setIsEntered(true)
-
-            
-        } else {
-            setIsEntered(false)
-        }
-
-    }
- 
-    
-
     
     return (
-        <Provider value={{isEntered, setIsEntered, enterHandler}} >
+        <Provider value={{isEntered}} >
             {children}
         </Provider>
     )

@@ -11,7 +11,8 @@ module.exports = {
         chrono: ['ChronoType'],
         tommylight: ['TommyLight'],
         tommyregular: ['TommyRegular']
-      }
+      },
+
     },
     colors: {
       // backgrounds
@@ -29,7 +30,7 @@ module.exports = {
     },
     screens: {
       tablet: '640px',
-      // => @media (min-width: 640px) { ... }
+      // => @media (min-width: 640px) { ... },
       laptop: '1024px',
       // => @media (min-width: 1024px) { ... }
       desktop: '1280px',

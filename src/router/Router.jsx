@@ -1,16 +1,29 @@
 import WebPage from '../pages/WebPage'
 import PostPage from '../pages/PostPage'
 import ErrorPage from '../ErrorPage'
-import { createBrowserRouter, createRoutesFromElements, Route } from 'react-router-dom'
+import { createBrowserRouter} from 'react-router-dom'
 import WelcomeSection from '../pages/WelcomeSection'
-import Root from '../layout/Root'
+import Root from '../root/Root'
 
-export const router = createBrowserRouter(
-    createRoutesFromElements(
-      <Route path='/' element={<Root/>} errorElement={<ErrorPage/>}>
-        <Route path='/' index='true' element={<WelcomeSection/>}/>
-        <Route path='/web-projects' element={<WebPage/>}/>
-        <Route path='/post-projects' element={<PostPage/>}/>
-      </Route>
-    )
-)
+export const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Root />,
+    children: [
+      {
+        path: '/web-projects',
+        element: <WebPage/>
+      },
+      {
+        path: '/post-projects',
+        element: <PostPage/>
+      }
+    ]
+  },
+  {
+    path: '/',
+    index: true,
+    element: <WelcomeSection/>,
+    errorElement:<ErrorPage/>,
+  }
+])

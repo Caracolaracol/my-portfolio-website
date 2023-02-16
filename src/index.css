@@ -27,24 +27,55 @@
   font-weight: bold;
 }
 
+
+@layer components {
+
+  /* ANIMATIONS */
+  .mainpage {
+    animation: showpage  450ms ease-in;
+  }
+  .projectshow {
+    animation: showproyects 450ms ease-out;
+  }
+  @keyframes showpage {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  @keyframes showproyects {
+    from {
+      transform: translate(-300px, 0);
+      opacity: 0;
+    }
+    to {
+      transform: translate(0px, 0);
+      opacity: 1;
+    }
+  }
+
+}
+
 :root {
-  margin: 0 auto;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-  --white-medium: rgb(198, 198, 198);
 }
 
 * {
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: var(--white-medium);
+  @apply text-whitem;
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   overflow: auto;
 }
+
+html {
+  @apply bg-negro
+}
+
+
 
 @layer components {
   .welcome-section__img1 {
