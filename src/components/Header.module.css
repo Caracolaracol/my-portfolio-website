@@ -1,10 +1,4 @@
-.grid {
-    display: grid;
-    gap: 0px 16px; 
-    grid-template-areas: 
-      ". ."; 
-    align-items: center; 
-}
+
 .active {
   text-decoration: dotted;
   font-weight: 900;

@@ -34,12 +34,21 @@
   .mainpage {
     animation: showpage  450ms ease-in;
   }
+
+  .showindex {
+    animation: showindex  850ms ease-in;
+  }
   .projectshow {
     animation: showproyects 450ms ease-out;
   }
   @keyframes showpage {
     from {opacity: 0;}
     to {opacity: 1;}
+  }
+  @keyframes showindex {
+    0% {opacity: 0}
+    50% {opacity: 0}
+    100% {opacity: 1;}
   }
   @keyframes showproyects {
     from {

@@ -1,6 +1,6 @@
 import logo1 from '../assets/logo1.png'
-import { Link, NavLink } from 'react-router-dom'
-import classes from './Header.module.css'
+import { Link } from 'react-router-dom'
+import NavBar from './NavBar'
 
 function Header() {
 
@@ -14,38 +14,7 @@ function Header() {
                 </div>
                 
                 <div className="hidden tablet:mr-12 tablet:block">
-                    <nav className='mainpage'>
-                        <ul className='flex space-evenly items-center flex-row gap-1 tablet:gap-6'>
-                            <li className='self-center text-xs text-center font-tommyregular tablet:text-lg'>
-                                <NavLink 
-                                    to='/web-projects'
-                                    className={({isActive}) =>
-                                    isActive ? classes.active : ""
-                                    }    
-                                end>
-                                   Web development projects
-                                </NavLink>
-                            </li>
-                            <li className='self-center text-xs text-center font-tommyregular tablet:text-lg'>
-                                <NavLink to='/post-projects'
-                                className={({isActive}) =>
-                                isActive ? classes.active : ""
-                                }    
-                            end>
-                                Post & Motion Graphics
-                                </NavLink>
-                            </li>
-                            <li className='self-center text-xs text-center font-tommyregular tablet:text-lg'>
-                                Blog
-                            </li>
-                            <li className='self-center text-xs text-center font-tommyregular tablet:text-lg'>
-                                Store
-                            </li>
-                            <li className='self-center text-xs text-center font-tommyregular tablet:text-lg'>
-                                Contact
-                            </li>
-                        </ul>
-                    </nav>
+                    <NavBar />
                 </div>
             </header>
         </div>
