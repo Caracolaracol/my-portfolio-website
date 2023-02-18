@@ -5,6 +5,7 @@ import WebProject from '../components/WebProject'
 import { createBrowserRouter} from 'react-router-dom'
 import WelcomeSection from '../pages/WelcomeSection'
 import Root from '../root/Root'
+import PostProject from '../components/PostProject'
 
 export const router = createBrowserRouter([
   {
@@ -21,14 +22,25 @@ export const router = createBrowserRouter([
             index: true
           },
           {
-            path:'/web-projects/:project',
+            path:'/web-projects/:webproject',
             element: <WebProject />
           }
         ]
       },
       {
         path: '/post-projects',
-        element: <PostPage/>
+        element: <PostPage/>,
+        children: [
+          {
+            path:'/post-projects',
+            element: <PostProject />,
+            index:true,
+          },
+          {
+            path:'/post-projects/:postproject',
+            element: <PostProject />
+          }
+        ]
       }
     ]
   },

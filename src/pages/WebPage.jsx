@@ -6,7 +6,15 @@ function WebPage() {
 
     return (
         <PagesContainer>
-            <WebProject />
+            <WebProject 
+                 />
+                 {/* 
+                    id={dataProject.id}
+                name={dataProject.name}
+                description={dataProject.description}
+                opinion={dataProject.opinion}
+                technologies={dataProject.technologies}
+                */ }
         </PagesContainer>
     )
 }

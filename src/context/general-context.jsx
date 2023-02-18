@@ -8,9 +8,11 @@ const { Provider } = GeneralContext
 
 function MyProvider({children}) {
     const [isEntered, setIsEntered] = useState(false)
+    const [place, setPlace] = useState('')
     
+
     return (
-        <Provider value={{isEntered}} >
+        <Provider value={{isEntered, setPlace, place}} >
             {children}
         </Provider>
     )

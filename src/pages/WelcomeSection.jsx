@@ -1,13 +1,21 @@
 import fotoyo1 from '../assets/yo.jpg'
 import fotoyo2 from '../assets/yo2.jpg'
 import { Link } from 'react-router-dom'
+import { useContext, useEffect } from 'react'
+import { GeneralContext } from '../context/general-context'
 
 function WelcomeSection(){
+    const { setPlace, place } = useContext(GeneralContext)
+
+    const placing = (section) => {
+        setPlace(section)
+        console.log(place)
+    }
 
     return (
         <div className='bg-negro h-fit w-100'>
             <section className='flex flex-col h-screen justify-center'>
-                <div className='self-center mb-16 overflow-hidden'>
+                <div className='self-center mb-40 tablet:mb-16 overflow-hidden'>
                     <div className='w-64 h-64 mx-auto tablet:w-72 tablet:h-72 overflow-hidden flex justify-center text-center'>
                         <div className='w-52 h-48 relative tablet:w-64 tablet:h-60 my-0 mx-auto overflow-hidden rounded-full items-baseline self-center'>
                             <img className='welcome-section__img1' src={fotoyo2} />
@@ -20,13 +28,13 @@ function WelcomeSection(){
                         <h2 className='text-2xl font-chrono antialiased tablet:text-3xl laptop:text-4xl laptop:tracking-wide'>Welcome to my site!</h2>
                     </div>
                     <div  className='flex flex-row justify-center mb-4 gap-5 ml-3 mr-3'>
-                        <Link to='web-projects ' >
-                            <button className='font-tommyregular tablet:text-xl bg-purpural rounded-sm hover:bg-purpuralh hover:text-texth p-2 tablet:p-4 laptop:p-5'>
+                        <Link to='web-projects/obsidian' >
+                            <button onClick={() => placing('WebProjectsSection')} className='font-tommyregular tablet:text-xl bg-purpural rounded-sm hover:bg-purpuralh hover:text-texth p-2 tablet:p-4 laptop:p-5'>
                                 Web development projects
                             </button>
                         </Link>
                         <Link to='/post-projects'>
-                            <button className='font-tommyregular tablet:text-xl bg-purpural rounded-sm hover:bg-purpuralh hover:text-texth p-2 tablet:p-4 laptop:p-5'>
+                            <button onClick={() => placing('PostProjectsSection')} className='font-tommyregular tablet:text-xl bg-purpural rounded-sm hover:bg-purpuralh hover:text-texth p-2 tablet:p-4 laptop:p-5'>
                                 Post & Motion Graphics projects
                             </button>
                         </Link>
