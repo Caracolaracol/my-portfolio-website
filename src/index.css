@@ -39,6 +39,7 @@
     animation: showindex  850ms ease-in;
   }
   .projectshow {
+    opacity: 1;
     animation: showproyects 450ms ease-out;
   }
   @keyframes showpage {

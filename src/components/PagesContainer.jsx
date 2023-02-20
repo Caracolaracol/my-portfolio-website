@@ -1,22 +1,8 @@
 import SideMenu from "./SideMenu"
-import { useEffect } from "react"
-import { useContext } from "react"
-import { GeneralContext } from "../context/general-context"
 
 export const PagesContainer = ({ children }) => {
-    const { setPlace } = useContext(GeneralContext)
-
-    useEffect(() => {
-        if (children.type.name == 'PostProject') {
-            setPlace('PostProjectsSection')
-        }
-        if (children.type.name == 'WebProject') {
-            setPlace('WebProjectsSection')
-        }
-    },[])
 
     return (
-
             <div className="pb-[7rem]">
                 <div className='top-0 h-32'>
                 </div>
@@ -24,9 +10,7 @@ export const PagesContainer = ({ children }) => {
                     <div className="tablet:w-[45vw] tablet:min-w-[28rem] max-w-[45rem]">
                         {children}
                     </div>
-                    <SideMenu somedata={children} />
                 </div>
-                
             </div>
 
     )

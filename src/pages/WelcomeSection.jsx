@@ -1,15 +1,13 @@
 import fotoyo1 from '../assets/yo.jpg'
 import fotoyo2 from '../assets/yo2.jpg'
-import { Link } from 'react-router-dom'
-import { useContext, useEffect } from 'react'
+import { Link} from 'react-router-dom'
+import { useContext } from 'react'
 import { GeneralContext } from '../context/general-context'
 
 function WelcomeSection(){
-    const { setPlace, place } = useContext(GeneralContext)
-
+    const { setPlace } = useContext(GeneralContext)
     const placing = (section) => {
         setPlace(section)
-        console.log(place)
     }
 
     return (
@@ -28,7 +26,7 @@ function WelcomeSection(){
                         <h2 className='text-2xl font-chrono antialiased tablet:text-3xl laptop:text-4xl laptop:tracking-wide'>Welcome to my site!</h2>
                     </div>
                     <div  className='flex flex-row justify-center mb-4 gap-5 ml-3 mr-3'>
-                        <Link to='web-projects/obsidian' >
+                        <Link to='web-projects' >
                             <button onClick={() => placing('WebProjectsSection')} className='font-tommyregular tablet:text-xl bg-purpural rounded-sm hover:bg-purpuralh hover:text-texth p-2 tablet:p-4 laptop:p-5'>
                                 Web development projects
                             </button>

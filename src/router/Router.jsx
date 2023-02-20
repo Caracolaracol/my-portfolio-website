@@ -1,12 +1,13 @@
 import WebPage from '../pages/WebPage'
 import PostPage from '../pages/PostPage'
 import ErrorPage from '../ErrorPage'
-import WebProject from '../components/WebProject'
 import { createBrowserRouter} from 'react-router-dom'
 import WelcomeSection from '../pages/WelcomeSection'
 import Root from '../root/Root'
 import PostProject from '../components/PostProject'
-
+import { webProjectsLoader } from '../pages/WebPage'
+import WebProjectContainer from '../components/WebProjectContainer'
+import { postProjectsLoader } from '../pages/PostPage'
 export const router = createBrowserRouter([
   {
     path: '/',
@@ -15,21 +16,18 @@ export const router = createBrowserRouter([
       {
         path: '/web-projects',
         element: <WebPage/>,
+        loader: webProjectsLoader,
         children: [
           {
-            path:'/web-projects/',
-            element: <WebProject />,
-            index: true
-          },
-          {
             path:'/web-projects/:webproject',
-            element: <WebProject />
+            element: <WebProjectContainer />
           }
         ]
       },
       {
         path: '/post-projects',
         element: <PostPage/>,
+        loader: postProjectsLoader,
         children: [
           {
             path:'/post-projects',

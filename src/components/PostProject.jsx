@@ -1,9 +1,26 @@
+import { useEffect, useState } from "react"
+import { Link } from "react-router-dom"
 
-import { useParams } from "react-router-dom"
-function PostProject () {
-    const params = useParams()
-    console.log(params)
-    
+function PostProject (props) {
+    const [dataProject, setDataProject] = useState({})
+    const [nextData, setNextData] = useState({})
+
+    const params = props.paramsProject
+    const projects = props.projects
+
+    useEffect(()=> {
+        const currentProject = projects.find((el)=>el.id === params)
+        const indexCurr = projects.indexOf(currentProject)
+        const nextProject = projects[indexCurr+1]
+        const lastArrayIndex = projects.length - 1
+        if (indexCurr == lastArrayIndex){
+            setNextData(projects[0])
+        } else {
+            setNextData(nextProject)
+        }
+        setDataProject(currentProject)
+    },[params,dataProject])
+
     return (
         <div className='mainpage projectshow'>
             <div className='border-b-[1px] border-naranja  mb-8'>
@@ -42,9 +59,11 @@ function PostProject () {
 
             </div>
             <div className='flex justify-end min-w-full'>
-                <button className='w-36 h-12 font-tommyregular tablet:text-xl bg-purpural rounded-sm hover:bg-purpuralh hover:text-texth'>
-                    Next project
-                </button>
+            <Link to={`/post-projects/${nextData.id}`}>
+                            <button className='w-36 h-12 font-tommyregular tablet:text-xl bg-purpural rounded-sm hover:bg-purpuralh hover:text-texth'>
+                                Next project
+                            </button>
+                        </Link>
             </div>
         </div>
     )
