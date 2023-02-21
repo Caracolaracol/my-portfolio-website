@@ -110,24 +110,29 @@
   background-position: center;
 }
 .swiper-button-prev::after {
-  display: none;
+  content: '';
+  background-image: url('./assets/next.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
 }
 
 .swiper-button-next {
   background-image: url('./assets/next.png');
   background-repeat: no-repeat;
-  background-size: auto 100%;
+  background-size: 100% 100%;
   background-position: center;
 }
 .swiper-button-next::after {
-  display: none;
+  content: '';
+  background-image: url('./assets/next.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
 }
 
 .swiper-button-prev, .swiper-button-next {
-    right:10px;
-    padding: 30px;
     filter: drop-shadow(2px 2px 7px rgb(82, 44, 3));
-    
 }
 
 
