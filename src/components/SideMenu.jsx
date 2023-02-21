@@ -1,10 +1,8 @@
-import { useState, useContext, useEffect } from "react";
-import { GeneralContext } from "../context/general-context"
+import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 
 
 function SideMenu(props) {
-    const { place } = useContext(GeneralContext)
     const [placeData, setPlaceData] = useState('')
 
     useEffect(() => {
@@ -16,12 +14,10 @@ function SideMenu(props) {
         }
     },[])
 
-    
-
     return (
         <div className='hidden showindex laptop:block  w-40 h-[25rem] fixed top-40 left-0'>
             <div className="ml-2">
-                <h2 className="font-chrono text-lg antialiased tracking-wider">{place == 'PostProjectsSection' ? 'Index of videos' : place == 'WebProjectsSection' ? 'Index of projects' : ''}</h2>
+                <h2 className="font-chrono text-lg antialiased tracking-wider">{props.location == '/post-projects' ? 'Index of videos' : props.location == '/web-projects' ? 'Index of projects' : ''}</h2>
                 <div>
                     <ul> 
                         { 

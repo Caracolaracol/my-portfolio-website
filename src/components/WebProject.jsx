@@ -4,11 +4,12 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
+import "swiper/css/effect-fade";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 import "../index.css";
-import { Pagination, Navigation, HashNavigation } from "swiper";
+import { Pagination, Navigation, HashNavigation, EffectFade } from "swiper";
 
 function WebProject (props) {
     const [dataProject, setDataProject] = useState({})
@@ -54,21 +55,21 @@ function WebProject (props) {
                 </div>
                 
 
-                <div className=' w-[90%] h-[90%]'>
+                <div className=' w-[100%] h-[100%]'>
                     <Swiper
                         spaceBetween={30}
-                        hashNavigation={{
-                            watchState: true,
-                        }}
+                        
                         pagination={{
                             clickable: true,
                         }}
                         navigation={true}
-                        modules={[Pagination, Navigation, HashNavigation]}
-                        className="mySwiper"
+                        
+                        modules={[Pagination, Navigation, HashNavigation, EffectFade]}
+                        effect={"fade"}
+                        className="mySwiper bg-negro"
                     >
                         {
-                                dataProject != undefined ? (images.map((s) => <SwiperSlide data-hash={s}><img key={s} src={s} /></SwiperSlide>)) : null
+                                dataProject != undefined ? (images.map((s) => <SwiperSlide data-hash={s}><img key={s} src={s} zoom='true' /></SwiperSlide>)) : null
                         }
 
                     </Swiper>
@@ -86,6 +87,7 @@ function WebProject (props) {
                     <div className=' min-w-full h-10'>
 
                     </div>
+                    
                     <h2 className='font-chrono text-[1.7rem]'>
                         Technologies i used
                     </h2>
@@ -96,6 +98,15 @@ function WebProject (props) {
                         <div className='bg-naranja w-12 h-12 '></div>
                         <div className='bg-naranja w-12 h-12 '></div>
                     </div>
+                    <div className=' min-w-full h-10'>
+
+                    </div>
+                    <div className="flex justify-end">
+                        <a className='font-tommyregular text-[1.2rem] text-naranja hover:text-naranjahover' href={dataProject.github} target='_blank' >
+                            Github Repository
+                        </a>
+                    </div>
+                    
                     <p>
 
                     </p>

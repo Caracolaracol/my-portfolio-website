@@ -5,9 +5,13 @@ import { createBrowserRouter} from 'react-router-dom'
 import WelcomeSection from '../pages/WelcomeSection'
 import Root from '../root/Root'
 import { webProjectsLoader } from '../pages/WebPage'
-import WebProjectContainer from '../components/WebProjectContainer'
+import WebProjectContainer from '../components/utils/WebProjectContainer'
 import { postProjectsLoader } from '../pages/PostPage'
-import PostProjectContainer from '../components/PostProjectContainer'
+import PostProjectContainer from '../components/utils/PostProjectContainer'
+import BlogPage from '../pages/BlogPage'
+import BlogContainer from '../components/utils/BlogContainer'
+import AboutPage from '../pages/ContactPage'
+
 export const router = createBrowserRouter([
   {
     path: '/',
@@ -34,6 +38,20 @@ export const router = createBrowserRouter([
             element: <PostProjectContainer />
           }
         ]
+      },
+      {
+        path: '/blog',
+        element: <BlogPage/>,
+        children: [
+          {
+            path:'/blog/:blogentry',
+            element: <BlogContainer />
+          }
+        ]
+      },
+      {
+        path: '/about',
+        element: <AboutPage/>,
       }
     ]
   },

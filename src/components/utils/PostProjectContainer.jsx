@@ -1,6 +1,6 @@
 
-import SideMenu from "./SideMenu"
-import PostProject from './PostProject'
+import SideMenu from "../SideMenu"
+import PostProject from '../PostProject'
 
 
 function PostProjectContainer (props) {

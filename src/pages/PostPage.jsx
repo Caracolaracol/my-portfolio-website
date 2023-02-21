@@ -1,20 +1,17 @@
 
 import { useLoaderData, useParams } from 'react-router-dom'
-import { PagesContainer } from '../components/PagesContainer'
+import { PagesContainer } from '../components/utils/PagesContainer'
 import { getProjects } from '../services/services'
-import PostProjectContainer from '../components/PostProjectContainer'
+import PostProjectContainer from '../components/utils/PostProjectContainer'
 
 export async function postProjectsLoader() {
     const projects = await getProjects('PostProjects')
     return projects
 }
 
-
 function PostPage() {
     const params = useParams()
     const projects = useLoaderData()
-    console.log(projects, params.postproject)
-
 
     return (
         <PagesContainer>

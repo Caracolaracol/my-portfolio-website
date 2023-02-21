@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom"
-import classes from './Header.module.css'
+import classes from './NavBar.module.css'
 
 function NavBar() {
 
@@ -26,12 +26,20 @@ function NavBar() {
                         Post & Motion Graphics
                     </NavLink>
                 </li>
-                <li className='self-center text-xs text-center font-tommyregular tablet:text-lg'>
-                    Blog
-                </li>
-                <li className='self-center text-xs text-center font-tommyregular tablet:text-lg'>
-                    Contact
-                </li>
+                <NavLink to='/blog'
+                        className={({ isActive }) =>
+                            isActive ? classes.active : ""
+                        }
+                        end>
+                        Blog
+                    </NavLink>
+                    <NavLink to='/about'
+                        className={({ isActive }) =>
+                            isActive ? classes.active : ""
+                        }
+                        end>
+                        About
+                    </NavLink>
             </ul>
         </nav>
     )

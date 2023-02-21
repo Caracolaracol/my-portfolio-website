@@ -1,7 +1,7 @@
 
 import { useLoaderData, useParams } from 'react-router-dom'
-import { PagesContainer } from '../components/PagesContainer'
-import WebProjectContainer from '../components/WebProjectContainer'
+import { PagesContainer } from '../components/utils/PagesContainer'
+import WebProjectContainer from '../components/utils/WebProjectContainer'
 import { getProjects } from '../services/services'
 
 export async function webProjectsLoader() {

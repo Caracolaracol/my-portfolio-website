@@ -1,6 +1,6 @@
 
-import SideMenu from "./SideMenu"
-import WebProject from "./WebProject"
+import SideMenu from "../SideMenu"
+import WebProject from "../WebProject"
 
 
 function WebProjectContainer (props) {
