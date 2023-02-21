@@ -4,12 +4,14 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
-import "swiper/css/effect-fade";
-import "swiper/css/pagination";
+import "swiper/css/zoom"
 import "swiper/css/navigation";
+import "swiper/css/pagination";
+
+
 
 import "../index.css";
-import { Pagination, Navigation, HashNavigation, EffectFade } from "swiper";
+import { Pagination, Navigation, HashNavigation, EffectFade, Zoom } from "swiper";
 
 function WebProject (props) {
     const [dataProject, setDataProject] = useState({})
@@ -57,22 +59,20 @@ function WebProject (props) {
 
                 <div className=' w-[100%] h-[100%]'>
                     <Swiper
-                        spaceBetween={30}
-                        
                         pagination={{
                             clickable: true,
                         }}
                         navigation={true}
-                        
-                        modules={[Pagination, Navigation, HashNavigation, EffectFade]}
-                        effect={"fade"}
+                        zoom={true}
+                        modules={[Pagination, Navigation, Zoom]}
                         className="mySwiper bg-negro"
                     >
                         {
-                                dataProject != undefined ? (images.map((s) => <SwiperSlide data-hash={(s)}><img key={s} src={s} zoom='true' /></SwiperSlide>)) : null
+                                dataProject != undefined ? (images.map((s) => <SwiperSlide data-hash={(s)} zoom='true'><img key={s} src={s} /></SwiperSlide>)) : null
                         }
 
                     </Swiper>
+                    
                 </div>
                 <div className=' min-w-full h-6'>
 
