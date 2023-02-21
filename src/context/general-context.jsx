@@ -8,10 +8,10 @@ const { Provider } = GeneralContext
 
 function MyProvider({children}) {
     const [place, setPlace] = useState('')
-    
+    const [dataProject, setDataProject] = useState({})
 
     return (
-        <Provider value={{setPlace, place}} >
+        <Provider value={{setPlace, place, dataProject, setDataProject}} >
             {children}
         </Provider>
     )

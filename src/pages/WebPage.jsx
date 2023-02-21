@@ -14,7 +14,6 @@ function WebPage() {
     const params = useParams()
     const projects = useLoaderData()
 
-
     return (
         <PagesContainer>
             <WebProjectContainer location='/web-projects' projects={projects} paramsProject={params.webproject ? params.webproject : 'obsidian'} />

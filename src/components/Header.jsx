@@ -9,7 +9,7 @@ function Header() {
             <header className='flex flex-row justify-between items-center border-b-[1px] border-whitem border-opacity-30 mx-5'>
                 <div className='ml-2 tablet:ml-12'>
                     <Link to='/'>
-                        <img src={logo1} className='w-20 tablet:w-32 mainpage'/>
+                        <img src={logo1} className='w-20 tablet:w-32 transicion'/>
                     </Link>
                 </div>
                 

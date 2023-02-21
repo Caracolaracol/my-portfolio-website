@@ -5,6 +5,7 @@
 			"name": "Obsidian",
 			"description": "This is a clone of the <a className='text-naranja hover:text-naranjahover' href='https://obsidian.md/' target='_blank' >Obsidian website</a>, made for improving my developing skills. It is the landing page of the site. I tried to made this page without seeing the original html because i thought that doing it this way would make it harder to clone.",
 			"opinion": "Obsidian its a software that i like very much, i really recommend you to try it!",
+			"images": ["../src/assets/imagecarousel/obsidianimage1.png", "../src/assets/imagecarousel/obsidianimage2.png", "../src/assets/imagecarousel/obsidianimage3.png", "../src/assets/imagecarousel/obsidianimage4.png"],
 			"technologies": [{
 				"name": "HTML",
 				"img": "imgurl",
@@ -15,29 +16,51 @@
 		},
 		{	
 			"id": "ironplantcl",
-			"name": "Ironplant.cl"
+			"name": "Ironplant.cl",
+			"images": ["obsidianimage1.png", "obsidianimage2.png", "obsidianimage3.png", "obsidianimage4.png"]
+			
 		},
 		{
 			"id":"myportfolio",
-			"name": "My Portfolio"
+			"name": "My Portfolio",
+			"images": ["obsidianimage1.png", "obsidianimage2.png", "obsidianimage3.png", "obsidianimage4.png"]
 		},
 		{
 			"id": "languagespin",
-			"name": "Language Spin"
+			"name": "Language Spin",
+			"images": ["obsidianimage1.png", "obsidianimage2.png", "obsidianimage3.png", "obsidianimage4.png"]
 		},
 		{
 			"id": "myfirstsite",
-			"name": "My first Site"
+			"name": "My first Site",
+			"images": ["obsidianimage1.png", "obsidianimage2.png", "obsidianimage3.png", "obsidianimage4.png"]
 		},
 		{
 			"id":"pokemoncenter",
-			"name": "Pokemon Center"
+			"name": "Pokemon Center",
+			"images": ["obsidianimage1.png", "obsidianimage2.png", "obsidianimage3.png", "obsidianimage4.png"]
 		}
 	],
 	"PostProjects": [
 		{
 			"id": "bichos",
-			"name": "Bichos"
+			"name": "Bichos",
+			"images": ["obsidianimage1.png", "obsidianimage2.png", "obsidianimage3.png", "obsidianimage4.png"]
+		},
+		{
+			"id": "lacenaestalista",
+			"name": "La cena está lista",
+			"images": ["./assets/imagecarousel/obsidianimage1.png", "obsidianimage2.png", "obsidianimage3.png", "obsidianimage4.png"]
+		},
+		{
+			"id": "cruzandorios",
+			"name": "Cruzando Ríos",
+			"images": ["obsidianimage1.png", "obsidianimage2.png", "obsidianimage3.png", "obsidianimage4.png"]
+		},
+		{
+			"id":"quebradaradiocontrol",
+			"name": "Quebrada Radiocontrol",
+			"images": ["obsidianimage1.png", "obsidianimage2.png", "obsidianimage3.png", "obsidianimage4.png"]
 		}
 	]
 

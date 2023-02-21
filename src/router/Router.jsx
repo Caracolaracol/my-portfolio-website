@@ -4,10 +4,10 @@ import ErrorPage from '../ErrorPage'
 import { createBrowserRouter} from 'react-router-dom'
 import WelcomeSection from '../pages/WelcomeSection'
 import Root from '../root/Root'
-import PostProject from '../components/PostProject'
 import { webProjectsLoader } from '../pages/WebPage'
 import WebProjectContainer from '../components/WebProjectContainer'
 import { postProjectsLoader } from '../pages/PostPage'
+import PostProjectContainer from '../components/PostProjectContainer'
 export const router = createBrowserRouter([
   {
     path: '/',
@@ -30,13 +30,8 @@ export const router = createBrowserRouter([
         loader: postProjectsLoader,
         children: [
           {
-            path:'/post-projects',
-            element: <PostProject />,
-            index:true,
-          },
-          {
             path:'/post-projects/:postproject',
-            element: <PostProject />
+            element: <PostProjectContainer />
           }
         ]
       }

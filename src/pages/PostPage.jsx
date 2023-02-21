@@ -1,5 +1,4 @@
 
-
 import { useLoaderData, useParams } from 'react-router-dom'
 import { PagesContainer } from '../components/PagesContainer'
 import { getProjects } from '../services/services'
@@ -14,11 +13,12 @@ export async function postProjectsLoader() {
 function PostPage() {
     const params = useParams()
     const projects = useLoaderData()
+    console.log(projects, params.postproject)
 
 
     return (
         <PagesContainer>
-            <PostProjectContainer location='/post-projects' projects={projects} paramsProject={params.webproject ? params.webproject : 'bichos'} />
+            <PostProjectContainer location='/post-projects' projects={projects} paramsProject={params.postproject ? params.postproject : 'bichos'} />
         </PagesContainer>
     )
 }

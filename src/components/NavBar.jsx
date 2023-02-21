@@ -5,7 +5,7 @@ function NavBar() {
 
 
     return (
-        <nav className='mainpage'>
+        <nav className='transicion'>
             <ul className='flex space-evenly items-center flex-row gap-1 tablet:gap-6'>
                 <li className='self-center text-xs text-center font-tommyregular tablet:text-lg'>
                     <NavLink
