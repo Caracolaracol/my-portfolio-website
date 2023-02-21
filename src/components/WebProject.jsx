@@ -68,7 +68,7 @@ function WebProject (props) {
                         className="mySwiper bg-negro"
                     >
                         {
-                                dataProject != undefined ? (images.map((s) => <SwiperSlide data-hash={(s)} zoom='true'><img key={s} src={s} /></SwiperSlide>)) : null
+                                dataProject != undefined ? (images.map((s) => <SwiperSlide data-hash={(s)} zoom='true'><img key={s} src={s} width="1280" height="720"/></SwiperSlide>)) : null
                         }
 
                     </Swiper>
