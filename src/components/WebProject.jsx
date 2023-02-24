@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react"
-import { Link} from "react-router-dom"
+import { useEffect, useState, useContext } from "react"
+import { Link, useLocation} from "react-router-dom"
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import { useRef } from "react";
 import * as Tooltip from '@radix-ui/react-tooltip';
 
 // Import Swiper styles
@@ -12,10 +12,12 @@ import "swiper/css/pagination";
 
 import "../index.css";
 import { Pagination, Navigation, HashNavigation, EffectFade, Zoom } from "swiper";
+import { GeneralContext } from "../context/general-context";
 
 
 function WebProject (props) {
     
+    const { pathname } = useLocation()
     const [dataProject, setDataProject] = useState({})
     const [nextData, setNextData] = useState({})
     const [prevData, setPrevData] = useState({})
@@ -24,12 +26,16 @@ function WebProject (props) {
     const [images, setImages] = useState([])
     const [tech, setTech] = useState([])
     const [asd, setAsd] = useState('')
+    const { scroll } = useContext(GeneralContext)
   
 
 
     const params = props.paramsProject
     const projects = props.projects
 
+    useEffect(() => {
+        window.scrollTo({top: 0, behavior: 'smooth'});
+      }, [pathname]);
     
 
     useEffect(()=> {
@@ -62,6 +68,7 @@ function WebProject (props) {
         
         
     },[params,dataProject,images,tech,asd])
+
 
     return (
         <div>
@@ -163,17 +170,18 @@ function WebProject (props) {
 
             </div>
             <div className='flex justify-end min-w-full gap-2'>
-                <div className="w-44">
+                <div className="tablet:w-44">
                     {atStart ? null : <Link to={`/web-projects/${prevData.id ? prevData.id : null}`}>
-                        <button className='w-44 h-12 font-tommyregular tablet:text-xl bg-purpuraclaro rounded-sm hover:bg-purpuralh hover:text-texth'>
+                        <button key={dataProject.name} onClick={() => scroll.current.scrollIntoView()}
+         className='tablet:w-44 p-2 tablet:h-12 font-tommyregular tablet:text-xl bg-purpuraclaro rounded-sm hover:bg-purpuralh hover:text-texth'>
                             Previous project
                         </button>
                     </Link>
                     }
                 </div>
-                <div className="w-44">
+                <div className="tablet:w-44">
                     {atEnd ? null : <Link to={`/web-projects/${nextData.id}`}>
-                        <button className='w-44 h-12 font-tommyregular tablet:text-xl bg-purpuraclaro rounded-sm hover:bg-purpuralh hover:text-texth'>
+                        <button key={dataProject.name} onClick={() => scroll.current.scrollIntoView()} className='p-2 tablet:w-44 tablet:h-12 font-tommyregular tablet:text-xl bg-purpuraclaro rounded-sm hover:bg-purpuralh hover:text-texth'>
                             Next project
                         </button>
                     </Link>}

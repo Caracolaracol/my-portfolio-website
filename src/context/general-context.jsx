@@ -8,9 +8,9 @@ const { Provider } = GeneralContext
 
 function MyProvider({children}) {
     const [dataProject, setDataProject] = useState({})
-
+    const [scroll, setScroll] = useState(null)
     return (
-        <Provider value={{dataProject, setDataProject}} >
+        <Provider value={{dataProject, setDataProject, scroll, setScroll}} >
             {children}
         </Provider>
     )

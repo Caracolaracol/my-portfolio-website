@@ -8,7 +8,7 @@ function WelcomeSection(){
     return (
         <div className='bg-negro h-fit w-100'>
             <section className='flex flex-col h-screen justify-center'>
-                <div className='self-center mb-40 tablet:mb-16 overflow-hidden'>
+                <div className='self-center  tablet:mb-16 overflow-hidden'>
                     <div className='w-64 h-64 mx-auto tablet:w-72 tablet:h-72 overflow-hidden flex justify-center text-center'>
                         <div className='w-52 h-48 relative tablet:w-64 tablet:h-60 my-0 mx-auto overflow-hidden rounded-full items-baseline self-center'>
                             <img className='welcome-section__img1' src={fotoyo2} />
