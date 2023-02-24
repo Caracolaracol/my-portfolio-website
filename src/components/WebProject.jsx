@@ -65,13 +65,13 @@ function WebProject (props) {
 
     return (
         <div>
-            <div className="showproject">
-                <div className="border-b-[1px] border-spacing-2 border-whitem border-opacity-20 mb-6">
-                    <h1 className='text-3xl tablet:text-5xl leading-tight font-tommy min-h-max pl-2 pb-2'>{dataProject.name}   </h1>
+            <div  className="showproject">
+                <div className="border-b-[1px] border-spacing-2 border-whitem border-opacity-20 mb-6 transicioncorta">
+                    <h1 key={dataProject.name} className={`text-3xl tablet:text-5xl leading-tight font-tommy min-h-max pl-2 pb-2 transicioncorta`}>{dataProject.name}   </h1>
                 </div>
 
 
-                <div className=' w-[100%] h-[100%] '>
+                <div key={dataProject.name} className=' w-[100%] h-[100%] transicioncorta'>
                     <Swiper
                         pagination={{
                             clickable: true,
@@ -91,12 +91,12 @@ function WebProject (props) {
                 <div className=' min-w-full h-6'>
 
                 </div>
-                <div className="flex justify-between flex-col   tablet:h-[13rem] desktop:h-[10rem]">
-                    <div className="desktop:min-h-[6.5rem]">
+                <div   className="flex justify-between flex-col   tablet:h-[13rem] desktop:h-[10rem]">
+                    <div key={dataProject.opinion} className="desktop:min-h-[6.5rem] transicioncorta">
                         <div className='text-[1rem] font-tommylight tracking-wide antialiased'>
                             <div className='text-[1rem] font-tommylight tracking-wide antialiased' dangerouslySetInnerHTML={{ __html: asd }}></div>
                         </div>
-                        <p>
+                        <p >
                             {dataProject.opinion}
                         </p>
                     </div>
@@ -107,7 +107,7 @@ function WebProject (props) {
                             <h2 className='font-chrono text-[1.7rem]'>
                                 Technologies i used
                             </h2>
-                            <div className='flex flex-wrap gap-3'>
+                            <div key={tech} className='flex flex-wrap gap-3 transicioncorta'>
                                 {
                                     tech.map(s => (
                                         <div key={s.idtech}>
