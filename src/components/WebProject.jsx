@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react"
-import { Link } from "react-router-dom"
+import { Link} from "react-router-dom"
 import { Swiper, SwiperSlide } from "swiper/react";
+
+import * as Tooltip from '@radix-ui/react-tooltip';
 
 // Import Swiper styles
 import "swiper/css";
@@ -8,56 +10,68 @@ import "swiper/css/zoom"
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-
-
 import "../index.css";
 import { Pagination, Navigation, HashNavigation, EffectFade, Zoom } from "swiper";
 
+
 function WebProject (props) {
+    
     const [dataProject, setDataProject] = useState({})
     const [nextData, setNextData] = useState({})
     const [prevData, setPrevData] = useState({})
     const [atEnd, setAtEnd] = useState(false)
     const [atStart, setAtStart] = useState(true)
     const [images, setImages] = useState([])
+    const [tech, setTech] = useState([])
+    const [asd, setAsd] = useState('')
+  
+
+
     const params = props.paramsProject
     const projects = props.projects
 
+    
+
     useEffect(()=> {
-        const currentProject = projects.find((el)=>el.id === params)
-        const indexCurr = projects.indexOf(currentProject)
-        const nextProject = projects[indexCurr+1]
-        const prevProject = projects[indexCurr-1]
-        const lastArrayIndex = projects.length - 1
-        if(indexCurr - 1 < 0) {
-            setAtStart(true)
-        } else {
-            setAtStart(false)
-        }
-        if (indexCurr == lastArrayIndex){
-            setAtEnd(true)
-        } else {
-            if( prevProject == undefined ) {
+            
+            const currentProject = projects.find((el)=>el.id === params)
+            const indexCurr = projects.indexOf(currentProject)
+            const nextProject = projects[indexCurr+1]
+            const prevProject = projects[indexCurr-1]
+            setPrevData(prevProject)
+            const lastArrayIndex = projects.length - 1
+            if(indexCurr - 1 < 0) {
+                setAtStart(true)
             } else {
-                setPrevData(prevProject)
+                setAtStart(false)
             }
-            setNextData(nextProject)
-            setAtEnd(false)
-        }
-        setDataProject(currentProject)
-        setImages(currentProject.images)
+            if (indexCurr == lastArrayIndex){
+                setAtEnd(true)
+            } else {
+                if( prevProject == undefined ) {
+                } else {
+                    setPrevData(prevProject)
+                }
+                setNextData(nextProject)
+                setAtEnd(false)
+            }
+            setDataProject(currentProject)
+            setImages(currentProject.images)
+            setTech(currentProject.technologies)
+            setAsd(currentProject.description)
         
-    },[params,dataProject,images])
+        
+    },[params,dataProject,images,tech,asd])
 
     return (
         <div>
             <div className="showproject">
                 <div className="border-b-[1px] border-spacing-2 border-naranjahover mb-6">
-                    <h1 className='text-5xl leading-tight font-tommy min-h-max pl-2 '>{dataProject.name}   </h1>   
+                    <h1 className='text-3xl tablet:text-5xl leading-tight font-tommy min-h-max pl-2 '>{dataProject.name}   </h1>
                 </div>
-                
 
-                <div className=' w-[100%] h-[100%]'>
+
+                <div className=' w-[100%] h-[100%] border-[1px] border-whitem border-opacity-10'>
                     <Swiper
                         pagination={{
                             clickable: true,
@@ -68,48 +82,80 @@ function WebProject (props) {
                         className="mySwiper bg-negro"
                     >
                         {
-                                dataProject != undefined ? (images.map((s) => <SwiperSlide data-hash={(s)} zoom='true'><img key={s} src={s} width="1280" height="720"/></SwiperSlide>)) : null
+                            dataProject != undefined ? (images.map((s) => <SwiperSlide data-hash={(s)} key={s} zoom='true'><img src={s} width="1280" height="720" /></SwiperSlide>)) : null
                         }
 
                     </Swiper>
-                    
+
                 </div>
                 <div className=' min-w-full h-6'>
 
                 </div>
-                <div>
-                    <p className='text-[1rem] font-tommylight tracking-wide antialiased'>
-                        This is a clone of the <a className='text-naranja hover:text-naranjahover' href='https://obsidian.md/' target='_blank' >Obsidian website</a>, made for improving my developing skills. It is the landing page of the site. I tried to made this page without seeing the original html because i thought that doing it this way would make it harder to clone.
-                    </p>
-                    <p>
-                        {dataProject.opinion}
-                    </p>
+                <div className="flex justify-between flex-col   tablet:h-[13rem] desktop:h-[10rem]">
+                    <div className="desktop:min-h-[6.5rem]">
+                        <div className='text-[1rem] font-tommylight tracking-wide antialiased'>
+                            <div className='text-[1rem] font-tommylight tracking-wide antialiased' dangerouslySetInnerHTML={{ __html: asd }}></div>
+                        </div>
+                        <p>
+                            {dataProject.opinion}
+                        </p>
+                    </div>
+                    
+
+                    <div className="tablet:flex tablet:justify-between ">
+                        <div>
+                            <h2 className='font-chrono text-[1.7rem]'>
+                                Technologies i used
+                            </h2>
+                            <div className='flex flex-wrap gap-3'>
+                                {
+                                    tech.map(s => (
+                                        <div key={s.idtech}>
+                                            <Tooltip.Provider delayDuration='80' skipDelayDuration='120'>
+                                                <Tooltip.Root>
+                                                    <Tooltip.Trigger asChild >
+                                                        <img
+                                                            key={s.idtech}
+                                                            src={s.img}
+                                                            width='40'
+                                                            height='40'
+                                                            rel="noreferrer noopener"
+                                                            className="svg"
+                                                            
+
+                                                        />
+                                                    </Tooltip.Trigger>
+                                                    <Tooltip.Portal>
+                                                        <Tooltip.Content className="TooltipContent" sideOffset={5} aria-label={s.description} side="bottom" >
+                                                                <div className="rounded-sm bg-whitem max-w-lg ">
+                                                                    <p className="text-purpuralh px-3 py-2">{s.description}</p>
+                                                                </div>
+                                                            <Tooltip.Arrow className="TooltipArrow" />
+                                                        </Tooltip.Content>
+                                                    </Tooltip.Portal>
+                                                </Tooltip.Root>
+                                            </Tooltip.Provider>
+                                        </div>))
+                                }
+                            </div>
+                        </div>
+                        <div className="pt-[1.7rem]">
+                            {dataProject.link ? <div className="flex justify-end">
+                                <a className='font-tommyregular text-[1.2rem] text-naranja hover:text-naranjahover' href={dataProject.link} target='_blank' >
+                                    Go to the site
+                                </a>
+                            </div> : null}
+                            <div className="flex justify-end">
+                                <a className='font-tommyregular text-[1.2rem] text-naranja hover:text-naranjahover' href={dataProject.github} target='_blank' >
+                                    Github Repository
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                     <div className=' min-w-full h-10'>
 
                     </div>
-                    
-                    <h2 className='font-chrono text-[1.7rem]'>
-                        Technologies i used
-                    </h2>
-                    <div className='flex flex-wrap gap-3'>
-                        <div className='bg-naranja w-12 h-12 '></div>
-                        <div className='bg-naranja w-12 h-12 '></div>
-                        <div className='bg-naranja w-12 h-12 '></div>
-                        <div className='bg-naranja w-12 h-12 '></div>
-                        <div className='bg-naranja w-12 h-12 '></div>
-                    </div>
-                    <div className=' min-w-full h-10'>
 
-                    </div>
-                    <div className="flex justify-end">
-                        <a className='font-tommyregular text-[1.2rem] text-naranja hover:text-naranjahover' href={dataProject.github} target='_blank' >
-                            Github Repository
-                        </a>
-                    </div>
-                    
-                    <p>
-
-                    </p>
                 </div>
                 <div className=' min-w-full h-10'>
 
@@ -134,7 +180,7 @@ function WebProject (props) {
                 </div>
             </div>
         </div>
-        
+
     )
 }
 

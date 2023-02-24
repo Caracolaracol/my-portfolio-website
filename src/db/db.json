@@ -3,64 +3,222 @@
 		{
 			"id":"obsidian",
 			"name": "Obsidian",
-			"description": "This is a clone of the <a className='text-naranja hover:text-naranjahover' href='https://obsidian.md/' target='_blank' >Obsidian website</a>, made for improving my developing skills. It is the landing page of the site. I tried to made this page without seeing the original html because i thought that doing it this way would make it harder to clone.",
-			"opinion": "Obsidian its a software that i like very much, i really recommend you to try it!",
+			"description": "This is a clone of the <a class='text-naranja hover:text-naranjahover' href='https://obsidian.md/' target='_blank' >Obsidian website</a>, made for improving my developing skills. It is the landing page of the site. I tried to make this page without seeing the original html because I thought that doing it this way would make it harder to clone.",
+			"opinion": "Obsidian its a software that I like very much, I really recommend you to try it!",
 			"images": ["/imagecarousel/obsidianimage1.png", "/imagecarousel/obsidianimage2.png"],
 			"github": "https://github.com/Caracolaracol/ObsidianProject",
-			"technologies": [{
-				"name": "HTML",
-				"img": "imgurl",
-				"img2": "imgurl2",
+			"technologies": [
+				{
+				"idtech": "html",
+				"name": "HTML5",
+				"img": "/icons/html5.svg",
 				"description": "HTML for the entire Site"
-			}]
+				},
+				{
+				"idtech": "css",
+				"name": "CSS3",
+				"img": "/icons/css3.svg",
+				"description": "CSS for the styling"
+				},
+				{
+				"idtech": "sass",
+				"name": "SASS",
+				"img": "/icons/sasscol.svg",
+				"description": "CSS extension for preprocessing the styles in a more eficient way"
+				}
+			]
 		},
 		{	
 			"id": "ironplantcl",
 			"name": "Ironplant.cl",
-			"images": ["obsidianimage1.png", "obsidianimage2.png", "obsidianimage3.png", "obsidianimage4.png"]
-			
+			"description": "This is a Remake of the <a class='text-naranja hover:text-naranjahover' href='https://www.ironplant.cl/' target='_blank' >Ironplant website</a>, a Vegan brand selling food supplements. It is the final project I made for the React Js bootcamp at Coderhouse. In this project you can actually simulate a purchase, it has itemlists, filtered items, item details, cart and a checkout form.",
+			"opinion": "Don't forget your B12!",
+			"images": ["/imagecarousel/ironplant1.png", "/imagecarousel/ironplant2.png"],
+			"github":"https://github.com/Caracolaracol/ReactJsFinal-coderhouse",
+			"link": "https://reactjsfinal-coderhouse.vercel.app/",
+			"technologies": [
+				{
+				"idtech": "react",
+				"name": "React JS",
+				"img": "/icons/react.svg",
+				"description": "One library to rule them all"
+				},
+				{
+				"idtech": "mui",
+				"name": "MateriaUI",
+				"img": "/icons/mui.svg",
+				"description": "Some components made with mui. It's faster"
+				},
+				{
+				"idtech": "firebase",
+				"name": "Firebase",
+				"img": "/icons/firebase.svg",
+				"description": "The database of products and customers are located in firebase"
+				}
+			]
 		},
 		{
 			"id":"myportfolio",
 			"name": "My Portfolio",
-			"images": ["obsidianimage1.png", "obsidianimage2.png", "obsidianimage3.png", "obsidianimage4.png"]
+			"description": "This is my porfolio and I'm showing you this project while you browse through this site. It contains all my art and web development works and also a blog where I write some stuff of my interest and some tales of mine.",
+			"opinion": "Thanks for being here!",
+			"images": ["/imagecarousel/portfolio1.png", "/imagecarousel/portfolio2.png"],
+			"github":"https://github.com/Caracolaracol/portfolio",
+			"link": "https://caracolaracol-portfolio.vercel.app/",
+			"technologies":[
+				{
+				"idtech": "react",
+				"name": "React JS",
+				"img": "/icons/react.svg",
+				"description": "One library to rule them all"
+				},
+				{
+				"idtech": "tailwind",
+				"name": "Tailwind CSS",
+				"img": "/icons/tailwind.svg",
+				"description": "My favorite CSS Framework, It is just awesome"
+				},
+				{
+				"idtech": "swiper",
+				"name": "Swiper JS",
+				"img": "/icons/swiper.svg",
+				"description": "I used this tool for the 'carousel' like sliders that are in each project page."
+				},
+				{
+				"idtech": "reactrouter",
+				"name": "React Router",
+				"img": "/icons/reactrouter.svg",
+				"description": "Routing tool for React, I used it with the new updates (since 6.4v) and its awesome"
+				}
+
+			]
 		},
 		{
 			"id": "languagespin",
 			"name": "Language Spin",
-			"images": ["obsidianimage1.png", "obsidianimage2.png", "obsidianimage3.png", "obsidianimage4.png"]
+			"description": "This is a language course platform, I worked at this project as a team made up of the best students of the latest bootcamps of web development and web design at 'Coderhouse' an e-learning platform based in Argentina, so it was a excelent job experience and the result was this site made for a language course institute, they teach English, Spanish, Italian and Portuguese",
+			"opinion": "Grazie mille!",
+			"images": ["/imagecarousel/obsidianimage1.png", "/imagecarousel/obsidianimage2.png"],
+			"github":"https://github.com/Caracolaracol/languageSpin-project",
+			"link": "https://language-spin.vercel.app/",
+			"technologies":[
+				{
+				"idtech": "react",
+				"name": "React JS",
+				"img": "/icons/react.svg",
+				"description": "One library to rule them all"
+				},
+				{
+				"idtech": "reactrouter",
+				"name": "React Router",
+				"img": "/icons/reactrouter.svg",
+				"description": "Routing tool for React, I used it with the new updates (since 6.4v) and its awesome"
+				},
+				{
+				"idtech": "tailwind",
+				"name": "Tailwind CSS",
+				"img": "/icons/tailwind.svg",
+				"description": "My favorite CSS Framework, It is just awesome"
+				}
+				
+				]
 		},
 		{
 			"id": "myfirstsite",
 			"name": "My first Site",
-			"images": ["obsidianimage1.png", "obsidianimage2.png", "obsidianimage3.png", "obsidianimage4.png"]
+			"description": "This is a Remake of the <a class='text-naranja hover:text-naranjahover' href='https://www.ironplant.cl/' target='_blank' >Ironplant website</a>, a Vegan brand selling food supplements. It is the final project I made for the React Js bootcamp at Coderhouse. In this project you can actually simulate a purchase, it has itemlists, filtered items, item details, cart and a checkout form.",
+			"opinion": "Proud of it!",
+			"images": ["/imagecarousel/firstsite1.png", "/imagecarousel/firstsite2.png"],
+			"github":"https://github.com/Caracolaracol/CaracolFirstSIte",
+			"link": "",
+			"technologies": [
+				{
+				"idtech": "html",
+				"name": "HTML5",
+				"img": "/icons/html5.svg",
+				"description": "HTML for the entire Site"
+				},
+				{
+				"idtech": "css",
+				"name": "CSS3",
+				"img": "/icons/css3.svg",
+				"description": "CSS for the styling"
+				},
+				{
+					"idtech": "sass",
+					"name": "SASS",
+					"img": "/icons/sasscol.svg",
+					"description": "CSS extension for preprocessing the styles in a more eficient way"
+					},
+				{
+				"idtech": "javascript",
+				"name": "Javascript",
+				"img": "/icons/javascript.svg",
+				"description": "Programming Language of choice"
+				}
+
+
+			]
 		},
 		{
 			"id":"pokemoncenter",
 			"name": "Pokemon Center",
-			"images": ["obsidianimage1.png", "obsidianimage2.png", "obsidianimage3.png", "obsidianimage4.png"]
+			"description": "This is a project that I did for the challenges of the Javascript Course at Coderhouse, It is a pokemon center simulator but privatized and it charges a certain amount of money to heal your pokemons. It is made with the pokeAPI, with that I got all the data of your pokemons, including the sprites.",
+			"opinion": "using pokeAPI its a great way to learn to use APIs and fetch data from databases!",
+			"images": ["/imagecarousel/centropokemon1.png", "/imagecarousel/centropokemon2.png"],
+			"github":"https://github.com/Caracolaracol/jsFinal-coderhouse",
+			"link": "",
+			"technologies": [
+				{
+				"idtech": "html",
+				"name": "HTML5",
+				"img": "/icons/html5.svg",
+				"description": "HTML for the entire Site"
+				},
+				{
+				"idtech": "css",
+				"name": "CSS3",
+				"img": "/icons/css3.svg",
+				"description": "CSS for the styling"
+				},
+				{
+					"idtech": "sass",
+					"name": "SASS",
+					"img": "/icons/sasscol.svg",
+					"description": "CSS extension for preprocessing the styles in a more eficient way"
+					},
+				{
+				"idtech": "javascript",
+				"name": "Javascript",
+				"img": "/icons/javascript.svg",
+				"description": "Programming Language of choice"
+				}
+
+
+			]
+			
 		}
 	],
 	"PostProjects": [
 		{
 			"id": "bichos",
 			"name": "Bichos",
-			"images": ["obsidianimage1.png", "obsidianimage2.png", "obsidianimage3.png", "obsidianimage4.png"]
+			"images": ["/imagecarousel/obsidianimage1.png", "/imagecarousel/obsidianimage2.png"]
 		},
 		{
 			"id": "lacenaestalista",
 			"name": "La cena está lista",
-			"images": ["./assets/imagecarousel/obsidianimage1.png", "obsidianimage2.png", "obsidianimage3.png", "obsidianimage4.png"]
+			"images": ["/imagecarousel/obsidianimage1.png", "/imagecarousel/obsidianimage2.png"]
 		},
 		{
 			"id": "cruzandorios",
 			"name": "Cruzando Ríos",
-			"images": ["obsidianimage1.png", "obsidianimage2.png", "obsidianimage3.png", "obsidianimage4.png"]
+			"images": ["/imagecarousel/obsidianimage1.png", "/imagecarousel/obsidianimage2.png"]
 		},
 		{
 			"id":"quebradaradiocontrol",
 			"name": "Quebrada Radiocontrol",
-			"images": ["obsidianimage1.png", "obsidianimage2.png", "obsidianimage3.png", "obsidianimage4.png"]
+			"images": ["/imagecarousel/obsidianimage1.png", "/imagecarousel/obsidianimage2.png"]
 		}
 	]
 

@@ -11,7 +11,7 @@ import PostProjectContainer from '../components/utils/PostProjectContainer'
 import BlogPage from '../pages/BlogPage'
 import BlogContainer from '../components/utils/BlogContainer'
 import AboutPage from '../pages/ContactPage'
-
+import Admin from '../pages/Admin'
 export const router = createBrowserRouter([
   {
     path: '/',
@@ -20,7 +20,7 @@ export const router = createBrowserRouter([
       {
         path: '/web-projects',
         element: <WebPage/>,
-        loader: webProjectsLoader,
+        loader:webProjectsLoader,
         children: [
           {
             path:'/web-projects/:webproject',
@@ -59,6 +59,12 @@ export const router = createBrowserRouter([
     path: '/',
     index: true,
     element: <WelcomeSection/>,
+    errorElement:<ErrorPage/>,
+  },
+  {
+    path: '/Admin',
+    index: true,
+    element: <Admin/>,
     errorElement:<ErrorPage/>,
   }
 ])

@@ -18,11 +18,6 @@ export const getSingleWebProject = async (params) => {
 
 }
 
-export const getObsidianProject = async () => {
-    const { WebProjects } = db
-    const data = WebProjects.find(el => el.id === 'obsidian')
-    return data
-}
 
 export const getNextProject = async (id) => {
     const { WebProjects } = db 

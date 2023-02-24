@@ -1,6 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  @apply text-whitem bg-negro; 
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
 @font-face {
   font-family: 'Tommy';
   src: url('./assets/fonts/MADE Tommy Soft Medium PERSONAL USE.otf') format('opentype');
@@ -29,29 +48,7 @@
 
 
 @layer components {
-  .swiper {
-    width: 100%;
-    height: 100%;
-    margin-left: auto;
-  margin-right: auto;
-  }
-  
-  .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-  }
-  
-  .swiper-slide img {
-    display: block;
-    width: 90%;
-    height: 100%;
-    object-fit: cover;
-  }
+
 
 
 
@@ -66,88 +63,7 @@
   .showproject {
     animation: showproject 450ms ease-out;
   }
-  @keyframes transicion {
-    from {opacity: 0;}
-    to {opacity: 1;}
-  }
-  @keyframes showindex {
-    0% {opacity: 0}
-    50% {opacity: 0}
-    100% {opacity: 1;}
-  }
-  @keyframes showproject {
-    from {
-      transform: translate(-300px, 0);
-      opacity: 0;
-    }
-    to {
-      transform: translate(0px, 0);
-      opacity: 1;
-    }
-  }
-  
-}
 
-:root {
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  @apply text-whitem bg-negro; 
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-.swiper-button-prev {
-  background-image: url('./assets/prev.png');
-  background-repeat: no-repeat;
-  background-size: auto 100%;
-  background-position: center;
-}
-.swiper-button-prev::after {
-  content: '';
-  background-image: url('./assets/next.png');
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  background-position: center;
-}
-
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.swiper-button-next {
-  background-image: url('./assets/next.png');
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  background-position: center;
-  background-color: aquamarine;
-  clip-path: circle(50%);
-  z-index: 99;
-}
-.swiper-button-next::after {
-  content: '';
-  background-image: url('./assets/next.png');
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  background-position: center;
-}
-
-.swiper-button-prev, .swiper-button-next {
-    filter: drop-shadow(2px 2px 7px rgb(82, 44, 3));
-}
-
-
-@layer components {
   .welcome-section__img1 {
     position: absolute;
     z-index: 99;
@@ -172,4 +88,97 @@
     100% { opacity:0; }
   }
 
+  @keyframes transicion {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  @keyframes showindex {
+    0% {opacity: 0}
+    50% {opacity: 0}
+    100% {opacity: 1;}
+  }
+  @keyframes showproject {
+    from {
+      transform: translate(-300px, 0);
+      opacity: 0;
+    }
+    to {
+      transform: translate(0px, 0);
+      opacity: 1;
+    }
+  }
+  
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+margin-right: auto;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.swiper-slide img {
+  display: block;
+  width: 90%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-button-prev {
+  background-image: url('./assets/prev.png');
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: center;
+  clip-path: circle(50%);
+}
+.swiper-button-prev::after {
+  content: '';
+  background-image: url('./assets/next.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.swiper-button-next {
+  background-image: url('./assets/next.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  clip-path: circle(50%);
+  z-index: 99;
+}
+.swiper-button-next::after {
+  content: '';
+  background-image: url('./assets/next.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+}
+
+.swiper-button-prev, .swiper-button-next {
+    filter: drop-shadow(2px 2px 7px rgb(82, 44, 3));
+}
+
+.TooltipArrow {
+  fill: white;
+}
+
+.svg {
+  filter: drop-shadow(0px 0px 2px rgba(195, 181, 155, 0.4));
 }
