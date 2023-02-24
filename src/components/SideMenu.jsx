@@ -15,8 +15,8 @@ function SideMenu(props) {
     },[])
 
     return (
-        <div className='hidden showindex laptop:block  w-40 h-[25rem] fixed top-40 left-0'>
-            <div className="ml-2">
+        <div className='hidden showindex laptop:block  w-48 h-[25rem] desktop:w-[10vw] fixed top-40 left-0'>
+            <div className="tablet:ml-2 laptop:ml-[14%] desktop:ml-[2vw]">
                 <h2 className="font-chrono text-lg antialiased tracking-wider">{props.location == '/post-projects' ? 'Index of videos' : props.location == '/web-projects' ? 'Index of projects' : ''}</h2>
                 <div>
                     <ul> 
