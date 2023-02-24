@@ -67,11 +67,11 @@ function WebProject (props) {
         <div>
             <div className="showproject">
                 <div className="border-b-[1px] border-spacing-2 border-whitem border-opacity-20 mb-6">
-                    <h1 className='text-3xl tablet:text-5xl leading-tight font-tommy min-h-max pl-2 '>{dataProject.name}   </h1>
+                    <h1 className='text-3xl tablet:text-5xl leading-tight font-tommy min-h-max pl-2 pb-2'>{dataProject.name}   </h1>
                 </div>
 
 
-                <div className=' w-[100%] h-[100%] border-[1px] border-whitem border-opacity-10'>
+                <div className=' w-[100%] h-[100%] '>
                     <Swiper
                         pagination={{
                             clickable: true,
@@ -171,9 +171,9 @@ function WebProject (props) {
                     </Link>
                     }
                 </div>
-                <div className="w-36">
+                <div className="w-44">
                     {atEnd ? null : <Link to={`/web-projects/${nextData.id}`}>
-                        <button className='w-36 h-12 font-tommyregular tablet:text-xl bg-purpuraclaro rounded-sm hover:bg-purpuralh hover:text-texth'>
+                        <button className='w-44 h-12 font-tommyregular tablet:text-xl bg-purpuraclaro rounded-sm hover:bg-purpuralh hover:text-texth'>
                             Next project
                         </button>
                     </Link>}
