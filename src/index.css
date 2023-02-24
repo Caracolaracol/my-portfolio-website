@@ -134,7 +134,7 @@ margin-right: auto;
   object-fit: cover;
 }
 
-.swiper-button-prev {
+/* .swiper-button-prev {
   background-image: url('./assets/prev.png');
   background-repeat: no-repeat;
   background-size: auto 100%;
@@ -169,10 +169,11 @@ margin-right: auto;
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: center;
-}
+} */
 
 .swiper-button-prev, .swiper-button-next {
     filter: drop-shadow(2px 2px 7px rgb(82, 44, 3));
+    color: rgb(224, 166, 133)
 }
 
 .TooltipArrow {

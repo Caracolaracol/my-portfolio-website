@@ -20,13 +20,16 @@ module.exports = {
       // components
       purpural: 'rgba(48, 31, 104, 0.385)',
       purpuralh: 'rgb(30, 18, 71)',
+      purpuraclaro: 'rgba(60, 41, 120, 0.682)',
       //  text colors
       whitem: 'rgb(198, 198, 198)',
       texth: 'rgb(221,212,237)',
       naranja: 'rgb(147, 94, 48)',
       naranjahover: 'rgb(205, 117, 39)',
       //borders
-      naranjaborder: 'rgba(147, 94, 48, 0.377)'
+      naranjaborder: 'rgba(147, 94, 48, 0.377)',
+      // 
+      orangeclear: 'rgb(184,108,103)'
     },
     screens: {
       tablet: '640px',

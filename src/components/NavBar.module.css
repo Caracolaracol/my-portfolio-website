@@ -2,5 +2,6 @@
 .active {
   text-decoration: dotted;
   font-weight: 900;
+  @apply text-orangeclear;
 }
 

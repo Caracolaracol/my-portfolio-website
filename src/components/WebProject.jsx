@@ -66,7 +66,7 @@ function WebProject (props) {
     return (
         <div>
             <div className="showproject">
-                <div className="border-b-[1px] border-spacing-2 border-naranjahover mb-6">
+                <div className="border-b-[1px] border-spacing-2 border-whitem border-opacity-20 mb-6">
                     <h1 className='text-3xl tablet:text-5xl leading-tight font-tommy min-h-max pl-2 '>{dataProject.name}   </h1>
                 </div>
 
@@ -165,7 +165,7 @@ function WebProject (props) {
             <div className='flex justify-end min-w-full gap-2'>
                 <div className="w-44">
                     {atStart ? null : <Link to={`/web-projects/${prevData.id ? prevData.id : null}`}>
-                        <button className='w-44 h-12 font-tommyregular tablet:text-xl bg-purpural rounded-sm hover:bg-purpuralh hover:text-texth'>
+                        <button className='w-44 h-12 font-tommyregular tablet:text-xl bg-purpuraclaro rounded-sm hover:bg-purpuralh hover:text-texth'>
                             Previous project
                         </button>
                     </Link>
@@ -173,7 +173,7 @@ function WebProject (props) {
                 </div>
                 <div className="w-36">
                     {atEnd ? null : <Link to={`/web-projects/${nextData.id}`}>
-                        <button className='w-36 h-12 font-tommyregular tablet:text-xl bg-purpural rounded-sm hover:bg-purpuralh hover:text-texth'>
+                        <button className='w-36 h-12 font-tommyregular tablet:text-xl bg-purpuraclaro rounded-sm hover:bg-purpuralh hover:text-texth'>
                             Next project
                         </button>
                     </Link>}
