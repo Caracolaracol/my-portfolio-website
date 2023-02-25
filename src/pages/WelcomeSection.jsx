@@ -6,7 +6,7 @@ function WelcomeSection(){
 
 
     return (
-        <div className='bg-negro h-fit w-100'>
+        <div className=' h-fit w-100'>
             <section className='flex flex-col h-screen justify-center'>
                 <div className='self-center  tablet:mb-16 overflow-hidden'>
                     <div className='w-64 h-64 mx-auto tablet:w-72 tablet:h-72 overflow-hidden flex justify-center text-center'>

@@ -1,6 +1,5 @@
 
 .active {
-  text-decoration: dotted;
   @apply text-orangeclear;
   filter: drop-shadow(2px 2px 7px rgb(82, 44, 3));
 }

@@ -32,6 +32,7 @@ module.exports = {
       orangeclear: 'rgb(184,108,103)'
     },
     screens: {
+      
       tablet: '640px',
       // => @media (min-width: 640px) { ... },
       laptop: '1024px',

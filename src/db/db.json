@@ -126,11 +126,11 @@
 		{
 			"id": "myfirstsite",
 			"name": "My first Site",
-			"description": "This is a Remake of the <a class='text-naranja hover:text-naranjahover' href='https://www.ironplant.cl/' target='_blank' >Ironplant website</a>, a Vegan brand selling food supplements. It is the final project I made for the React Js bootcamp at Coderhouse. In this project you can actually simulate a purchase, it has itemlists, filtered items, item details, cart and a checkout form.",
+			"description": "The first site that I made. I'ts a site about myself as a photographer with a store of prints of macrophotography of insects and a blog.",
 			"opinion": "Proud of it!",
 			"images": ["/imagecarousel/firstsite1.png", "/imagecarousel/firstsite2.png"],
 			"github":"https://github.com/Caracolaracol/CaracolFirstSIte",
-			"link": "",
+			"link": "https://caracolaracol.github.io/CaracolFirstSIte/",
 			"technologies": [
 				{
 				"idtech": "html",
@@ -203,22 +203,105 @@
 		{
 			"id": "bichos",
 			"name": "Bichos",
-			"images": ["/imagecarousel/obsidianimage1.png", "/imagecarousel/obsidianimage2.png"]
+			"description": "This is a music video made for the band Bichonauta, with bugs nature and destruction. The main idea behind was to make a videocollage made with book clippings and use the illustrations of old books about nature and entomology. This took me 2 years of uninterrupted research and editing of the illustrations. Maybe the main source of those illustrations was found at the <a class='text-naranja hover:text-naranjahover' href='https://obsidian.md/' target='_blank' >Biodiversity Heritage Library</a>. In adition all these illustrations were animated in After Effects.",
+			"opinion": "One of the hardest works i've done, really dificult to make this video",
+			"images": ["/imagecarousel/obsidianimage1.png", "/imagecarousel/obsidianimage2.png"],
+			"video": "kn46FRoGDuk",
+			"technologies": [
+				{
+				"idtech": "photoshop",
+				"name": "Adobe Photoshop",
+				"img": "/icons/photoshop.svg",
+				"description": "For Cutting and editing all the layers"
+				},
+				{
+				"idtech": "aftereffects",
+				"name": "Adobe After Effects",
+				"img": "/icons/aftereffects.svg",
+				"description": "'There is a lot of after effects inside your after effects'"
+				},
+				{
+					"idtech": "drawingtablet",
+					"name": "Drawing Tablet",
+					"img": "/icons/tablet.svg",
+					"description": "I edited and paint some bugs with a graphic tablet"
+					},
+				{
+				"idtech": "javascript",
+				"name": "Javascript",
+				"img": "/icons/javascript.svg",
+				"description": "There is some Javascript expressions for the animations"
+				}
+
+
+			]
 		},
 		{
 			"id": "lacenaestalista",
 			"name": "La cena está lista",
-			"images": ["/imagecarousel/obsidianimage1.png", "/imagecarousel/obsidianimage2.png"]
+			"description": "This is a clone of the <a class='text-naranja hover:text-naranjahover' href='https://obsidian.md/' target='_blank' >Obsidian website</a>, made for improving my developing skills. It is the landing page of the site. I tried to make this page without seeing the original html because I thought that doing it this way would make it harder to clone.",
+			"opinion": "Obsidian its a software that I like very much, I really recommend you to try it!",
+			"images": ["/imagecarousel/obsidianimage1.png", "/imagecarousel/obsidianimage2.png"],
+			"video": "xFmuDBHP8Uo",
+			"technologies": [
+				{
+				"idtech": "finalcut",
+				"name": "Final Cut",
+				"img": "/icons/html5.svg",
+				"description": "The video editing"
+				}
+			]
 		},
 		{
 			"id": "cruzandorios",
-			"name": "Cruzando Ríos",
-			"images": ["/imagecarousel/obsidianimage1.png", "/imagecarousel/obsidianimage2.png"]
+			"name": "Cruzando Ríos/Saltando Piedras",
+			"description": "This is a clone of the <a class='text-naranja hover:text-naranjahover' href='https://obsidian.md/' target='_blank' >Obsidian website</a>, made for improving my developing skills. It is the landing page of the site. I tried to make this page without seeing the original html because I thought that doing it this way would make it harder to clone.",
+			"opinion": "Obsidian its a software that I like very much, I really recommend you to try it!",
+			"images": ["/imagecarousel/obsidianimage1.png", "/imagecarousel/obsidianimage2.png"],
+			"video": "5IuzqtMDwCk",
+			"technologies": [
+				{
+				"idtech": "finalcut",
+				"name": "Final Cut",
+				"img": "/icons/html5.svg",
+				"description": "The video editing"
+				}
+
+			
+			]
+
 		},
 		{
 			"id":"quebradaradiocontrol",
 			"name": "Quebrada Radiocontrol",
-			"images": ["/imagecarousel/obsidianimage1.png", "/imagecarousel/obsidianimage2.png"]
+			"description": "This is a clone of the <a class='text-naranja hover:text-naranjahover' href='https://obsidian.md/' target='_blank' >Obsidian website</a>, made for improving my developing skills. It is the landing page of the site. I tried to make this page without seeing the original html because I thought that doing it this way would make it harder to clone.",
+			"opinion": "Obsidian its a software that I like very much, I really recommend you to try it!",
+			"images": ["/imagecarousel/obsidianimage1.png", "/imagecarousel/obsidianimage2.png"],
+			"video": "ORB423zdJy8",
+			"technologies": [
+				{
+				"idtech": "finalcut",
+				"name": "Final Cut",
+				"img": "/icons/html5.svg",
+				"description": "The video editing"
+				}
+			]
+		},
+		{
+			"id":"asambleadejueces",
+			"name": "Asamblea de Jueces",
+			"description": "This is a clone of the <a class='text-naranja hover:text-naranjahover' href='https://obsidian.md/' target='_blank' >Obsidian website</a>, made for improving my developing skills. It is the landing page of the site. I tried to make this page without seeing the original html because I thought that doing it this way would make it harder to clone.",
+			"opinion": "Obsidian its a software that I like very much, I really recommend you to try it!",
+			"images": ["/imagecarousel/obsidianimage1.png", "/imagecarousel/obsidianimage2.png"],
+			"video": "wxx3oMa7NVk",
+			"technologies": [
+				{
+				"idtech": "finalcut",
+				"name": "Final Cut",
+				"img": "/icons/html5.svg",
+				"description": "The video editing"
+				}
+			]
 		}
 	]
 

@@ -5,41 +5,46 @@ function NavBar() {
 
 
     return (
-        <nav className='transicion'>
-            <ul className='flex space-evenly items-center flex-row gap-1 tablet:gap-6'>
-                <li className='self-center text-xs text-center font-tommyregular tablet:text-lg'>
+        <nav className='transicion '>
+            <ul className='flex space-evenly items-center flex-row tablet:gap-3 laptop:gap-6'>
+                <li>
                     <NavLink
                         to='/web-projects'
                         className={({ isActive }) =>
-                            isActive ? classes.active : ""
+                            isActive ? `tablet:text-xs laptop:text-lg self-center text-center font-tommyregular ${classes.active}` : `tablet:text-xs laptop:text-lg self-center text-center font-tommyregular`
                         }
-                        end>
+                        >
                         Web development projects
                     </NavLink>
                 </li>
-                <li className='self-center text-xs text-center font-tommyregular tablet:text-lg'>
+                <li>
                     <NavLink to='/post-projects'
                         className={({ isActive }) =>
-                            isActive ? classes.active : ""
+                            isActive ? `tablet:text-xs laptop:text-lg self-center text-center font-tommyregular ${classes.active}` : `tablet:text-xs laptop:text-lg self-center text-center font-tommyregular`
                         }
-                        end>
+                        >
                         Post & Motion Graphics
                     </NavLink>
                 </li>
+                <li >
                 <NavLink to='/blog'
                         className={({ isActive }) =>
-                            isActive ? classes.active : ""
+                            isActive ? `tablet:text-xs laptop:text-lg self-center text-center font-tommyregular ${classes.active}` : `tablet:text-xs laptop:text-lg self-center text-center font-tommyregular`
                         }
-                        end>
+                        >
                         Blog
                     </NavLink>
-                    <NavLink to='/about'
+                </li>
+                <li>
+                <NavLink to='/about'
                         className={({ isActive }) =>
-                            isActive ? classes.active : ""
+                            isActive ? `tablet:text-xs laptop:text-lg self-center text-center font-tommyregular ${classes.active}` : `tablet:text-xs laptop:text-lg self-center text-center font-tommyregular`
                         }
-                        end>
+                        >
                         About
                     </NavLink>
+                </li>
+                    
             </ul>
         </nav>
     )
