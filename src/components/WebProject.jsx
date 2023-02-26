@@ -1,4 +1,4 @@
-import { useEffect, useState, useContext } from "react"
+import { useEffect, useState, useContext, Fragment, createElement } from "react"
 import { Link, useLocation} from "react-router-dom"
 import { Swiper, SwiperSlide } from "swiper/react";
 import * as Tooltip from '@radix-ui/react-tooltip';
@@ -12,6 +12,9 @@ import "swiper/css/pagination";
 import "../index.css";
 import { Pagination, Navigation, Zoom } from "swiper";
 import { GeneralContext } from "../context/general-context";
+import { unified } from "unified";
+import rehypeParse from "rehype-parse";
+import rehypeReact from "rehype-react";
 
 
 function WebProject (props) {
@@ -26,7 +29,7 @@ function WebProject (props) {
     const [tech, setTech] = useState([])
     const [description, setDescription] = useState('')
     const { scroll } = useContext(GeneralContext)
-  
+    const [content, setContent] = useState(Fragment)
 
 
     const params = props.paramsProject
@@ -36,36 +39,40 @@ function WebProject (props) {
         window.scrollTo({top: 0, behavior: 'smooth'});
       }, [pathname]);
     
-
+ 
     useEffect(()=> {
-            
-            const currentProject = projects.find((el)=>el.id === params)
-            const indexCurr = projects.indexOf(currentProject)
-            const nextProject = projects[indexCurr+1]
-            const prevProject = projects[indexCurr-1]
-            setPrevData(prevProject)
-            const lastArrayIndex = projects.length - 1
-            if(indexCurr - 1 < 0) {
-                setAtStart(true)
+        const currentProject = projects.find((el)=>el.id === params)
+        const indexCurr = projects.indexOf(currentProject)
+        const nextProject = projects[indexCurr+1]
+        const prevProject = projects[indexCurr-1]
+        setPrevData(prevProject)
+        const lastArrayIndex = projects.length - 1
+        if(indexCurr - 1 < 0) {
+            setAtStart(true)
+        } else {
+            setAtStart(false)
+        }
+        if (indexCurr == lastArrayIndex){
+            setAtEnd(true)
+        } else {
+            if( prevProject == undefined ) {
             } else {
-                setAtStart(false)
+                setPrevData(prevProject)
             }
-            if (indexCurr == lastArrayIndex){
-                setAtEnd(true)
-            } else {
-                if( prevProject == undefined ) {
-                } else {
-                    setPrevData(prevProject)
-                }
-                setNextData(nextProject)
-                setAtEnd(false)
-            }
-            setDataProject(currentProject)
-            setImages(currentProject.images)
-            setTech(currentProject.technologies)
-            setDescription(currentProject.description)
-        
-        
+            setNextData(nextProject)
+            setAtEnd(false)
+        }
+        setDataProject(currentProject)
+        setImages(currentProject.images)
+        setTech(currentProject.technologies)
+        setDescription(currentProject.description)
+        unified()
+            .use(rehypeParse,{fragment:true})
+            .use(rehypeReact, {createElement, Fragment})
+            .process(`${description.replace(/["]+/g, '')}`)
+            .then((file) => {
+            setContent(file.result)
+            })    
     },[params,dataProject,images,tech,description])
 
 
@@ -99,9 +106,7 @@ function WebProject (props) {
                 </div>
                 <div className="flex justify-between flex-col   tablet:h-[14rem] desktop:h-[12rem]">
                     <div key={dataProject.opinion} className="desktop:min-h-[9rem] transicioncorta flex flex-col justify-between">
-                        <div className='text-[1rem] font-tommylight tracking-wide antialiased'>
-                            <div className='text-[1rem] font-tommylight tracking-wide antialiased text-justify' dangerouslySetInnerHTML={{ __html: description }}></div>
-                        </div>
+                        <div className='text-[1rem] font-tommylight tracking-wide antialiased text-justify' >{content}</div>
                         <p className='text-[1rem] font-tommyregular tracking-wide antialiased italic'>
                             {dataProject.opinion}
                         </p>

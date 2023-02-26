@@ -3,7 +3,7 @@
 		{
 			"id":"obsidian",
 			"name": "Obsidian",
-			"description": "This is a clone of the <a class='text-naranja hover:text-naranjahover' href='https://obsidian.md/' target='_blank' >Obsidian website</a>, made for improving my developing skills. It is the landing page of the site. I tried to make this page without seeing the original html because I thought that doing it this way would make it harder to clone.",
+			"description": "This is a clone of the <a class='text-naranja hover:text-naranjahover' href='https://obsidian.md/' target='_blank' >Obsidian website</a>, made for improving my developing skills. It  is the landing page of the site. I tried to make this page without seeing the original html because I thought that doing it this way would make it harder to clone.",
 			"opinion": "Obsidian its a software that I like very much, I really recommend you to try it!",
 			"images": ["/imagecarousel/obsidianimage1.png", "/imagecarousel/obsidianimage2.png"],
 			"github": "https://github.com/Caracolaracol/ObsidianProject",
@@ -203,8 +203,8 @@
 		{
 			"id": "bichos",
 			"name": "Bichos",
-			"description": "This is a music video made for the band Bichonauta, with bugs nature and destruction. The main idea behind was to make a videocollage made with book clippings and use the illustrations of old books about nature and entomology. This took me 2 years of uninterrupted research and editing of the illustrations. Maybe the main source of those illustrations was found at the <a class='text-naranja hover:text-naranjahover' href='https://obsidian.md/' target='_blank' >Biodiversity Heritage Library</a>. In adition all these illustrations were animated in After Effects.",
-			"opinion": "One of the hardest works i've done, really dificult to make this video",
+			"description": "This is a music video I made for the band Bichonauta, with bugs nature and destruction. The main idea behind was to make a videocollage made with book clippings and use the illustrations of old books about nature and entomology. This took me 2 years of uninterrupted research and editing of the illustrations. Maybe the main source of those illustrations was found at the <a class='text-naranja hover:text-naranjahover' href='https://obsidian.md/' target='_blank' >Biodiversity Heritage Library</a>. In adition all these illustrations were animated in After Effects.",
+			"opinion": "One of the hardest works i've done, really dificult to make this video.",
 			"images": ["/imagecarousel/obsidianimage1.png", "/imagecarousel/obsidianimage2.png"],
 			"video": "kn46FRoGDuk",
 			"technologies": [
@@ -220,6 +220,12 @@
 				"img": "/icons/aftereffects.svg",
 				"description": "'There is a lot of after effects inside your after effects'"
 				},
+				{
+					"idtech": "finalcut",
+					"name": "Final Cut",
+					"img": "/icons/finalcut.png",
+					"description": "The video editing"
+					},
 				{
 					"idtech": "drawingtablet",
 					"name": "Drawing Tablet",
@@ -237,52 +243,54 @@
 			]
 		},
 		{
-			"id": "lacenaestalista",
-			"name": "La cena está lista",
-			"description": "This is a clone of the <a class='text-naranja hover:text-naranjahover' href='https://obsidian.md/' target='_blank' >Obsidian website</a>, made for improving my developing skills. It is the landing page of the site. I tried to make this page without seeing the original html because I thought that doing it this way would make it harder to clone.",
-			"opinion": "Obsidian its a software that I like very much, I really recommend you to try it!",
-			"images": ["/imagecarousel/obsidianimage1.png", "/imagecarousel/obsidianimage2.png"],
-			"video": "xFmuDBHP8Uo",
-			"technologies": [
-				{
-				"idtech": "finalcut",
-				"name": "Final Cut",
-				"img": "/icons/html5.svg",
-				"description": "The video editing"
-				}
-			]
-		},
-		{
 			"id": "cruzandorios",
 			"name": "Cruzando Ríos/Saltando Piedras",
-			"description": "This is a clone of the <a class='text-naranja hover:text-naranjahover' href='https://obsidian.md/' target='_blank' >Obsidian website</a>, made for improving my developing skills. It is the landing page of the site. I tried to make this page without seeing the original html because I thought that doing it this way would make it harder to clone.",
-			"opinion": "Obsidian its a software that I like very much, I really recommend you to try it!",
+			"description": "This is the first music video I made for the band Bichonauta, made with my friends through a journey to 'El Manzano' an incredible place full of nature. I did the video editing and some camera too. The little friend was handmade by another little friend",
 			"images": ["/imagecarousel/obsidianimage1.png", "/imagecarousel/obsidianimage2.png"],
 			"video": "5IuzqtMDwCk",
 			"technologies": [
 				{
 				"idtech": "finalcut",
 				"name": "Final Cut",
-				"img": "/icons/html5.svg",
+				"img": "/icons/finalcut.png",
 				"description": "The video editing"
 				}
-
-			
+				
 			]
 
 		},
 		{
+			"id": "lacenaestalista",
+			"name": "La cena está lista",
+			"description": "Another Music Video I made for Bichonauta filmed in the mountains, where mysterious creatures dwell. This time I try some Stop Motion to generate another perception about these little gnomes. They did a great job as actors in this video, and the little friend too.",
+			"images": ["/imagecarousel/obsidianimage1.png", "/imagecarousel/obsidianimage2.png"],
+			"video": "xFmuDBHP8Uo",
+			"technologies": [
+				{
+				"idtech": "finalcut",
+				"name": "Final Cut",
+				"img": "/icons/finalcut.png",
+				"description": "The video editing"
+				},
+				{
+					"idtech": "aftereffects",
+					"name": "Adobe After Effects",
+					"img": "/icons/aftereffects.svg",
+					"description": "'There is a little bit of after effects inside your after effects'"
+					}
+			]
+		},
+		{
 			"id":"quebradaradiocontrol",
 			"name": "Quebrada Radiocontrol",
-			"description": "This is a clone of the <a class='text-naranja hover:text-naranjahover' href='https://obsidian.md/' target='_blank' >Obsidian website</a>, made for improving my developing skills. It is the landing page of the site. I tried to make this page without seeing the original html because I thought that doing it this way would make it harder to clone.",
-			"opinion": "Obsidian its a software that I like very much, I really recommend you to try it!",
+			"description": "Quebrada Radiocontrol It's an experimental music group, this is one of the videos we made and it required a lot of work because we filmed at so many places and with so many techniques but the result was worth it.",
 			"images": ["/imagecarousel/obsidianimage1.png", "/imagecarousel/obsidianimage2.png"],
 			"video": "ORB423zdJy8",
 			"technologies": [
 				{
 				"idtech": "finalcut",
 				"name": "Final Cut",
-				"img": "/icons/html5.svg",
+				"img": "/icons/finalcut.png",
 				"description": "The video editing"
 				}
 			]
@@ -290,15 +298,14 @@
 		{
 			"id":"asambleadejueces",
 			"name": "Asamblea de Jueces",
-			"description": "This is a clone of the <a class='text-naranja hover:text-naranjahover' href='https://obsidian.md/' target='_blank' >Obsidian website</a>, made for improving my developing skills. It is the landing page of the site. I tried to make this page without seeing the original html because I thought that doing it this way would make it harder to clone.",
-			"opinion": "Obsidian its a software that I like very much, I really recommend you to try it!",
+			"description": "Another video of Quebrada Radiocontrol, a very strange one. Just enjoy.",
 			"images": ["/imagecarousel/obsidianimage1.png", "/imagecarousel/obsidianimage2.png"],
 			"video": "wxx3oMa7NVk",
 			"technologies": [
 				{
 				"idtech": "finalcut",
 				"name": "Final Cut",
-				"img": "/icons/html5.svg",
+				"img": "/icons/finalcut.png",
 				"description": "The video editing"
 				}
 			]

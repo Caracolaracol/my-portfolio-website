@@ -1,13 +1,21 @@
 import fotoyo1 from '../assets/yo.jpg'
 import fotoyo2 from '../assets/yo2.jpg'
 import { Link} from 'react-router-dom'
-
+import LoaderScreen from '../components/utils/LoaderScreen';
+import { useState, useEffect } from 'react';
 function WelcomeSection(){
+    const [isLoading, setIsLoading] = useState(true);
 
+    useEffect(() => {
+      // Simulate loading time
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 100);
+    }, []);
 
     return (
         <div className=' h-fit w-100'>
-            <section className='flex flex-col h-screen justify-center'>
+            <section key='welcome' className={`flex flex-col h-screen justify-center ${isLoading ? 'opacity-0' : 'opacity-100 transition-opacity duration-700'} `}>
                 <div className='self-center  tablet:mb-16 overflow-hidden'>
                     <div className='w-64 h-64 mx-auto tablet:w-72 tablet:h-72 overflow-hidden flex justify-center text-center'>
                         <div className='w-52 h-48 relative tablet:w-64 tablet:h-60 my-0 mx-auto overflow-hidden rounded-full items-baseline self-center'>
@@ -44,6 +52,8 @@ function WelcomeSection(){
                 <div className='tablet:h-20 tablet:w-20'>
                 </div>
             </section>
+
+
         </div>
     )
 }

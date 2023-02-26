@@ -1,0 +1,12 @@
+{
+    "Entries": [
+		{
+			"id":"caida",
+			"name": "Caida",
+			"paragraphs": "/01 - Caida (Terminado).md",
+			"images": ["/imagecarousel/obsidianimage1.png", "/imagecarousel/obsidianimage2.png"]
+		}
+
+	]
+
+}

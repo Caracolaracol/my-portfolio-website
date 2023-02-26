@@ -10,7 +10,7 @@ import { postProjectsLoader } from '../pages/PostPage'
 import PostProjectContainer from '../components/utils/PostProjectContainer'
 import BlogPage from '../pages/BlogPage'
 import BlogContainer from '../components/utils/BlogContainer'
-import AboutPage from '../pages/ContactPage'
+import AboutPage from '../pages/AboutPage'
 import Admin from '../pages/Admin'
 export const router = createBrowserRouter([
   {
