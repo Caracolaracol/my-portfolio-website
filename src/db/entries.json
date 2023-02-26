@@ -3,10 +3,14 @@
 		{
 			"id":"caida",
 			"name": "Caida",
-			"paragraphs": "/01 - Caida (Terminado).md",
+			"paragraphs": "../entries/caida.md",
+			"images": ["/imagecarousel/obsidianimage1.png", "/imagecarousel/obsidianimage2.png"]
+		},
+		{
+			"id":"lamontana",
+			"name": "La Montaña",
+			"paragraphs": "../entries/lamontana.md",
 			"images": ["/imagecarousel/obsidianimage1.png", "/imagecarousel/obsidianimage2.png"]
 		}
-
 	]
-
 }

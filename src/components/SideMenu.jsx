@@ -13,6 +13,9 @@ function SideMenu(props) {
         if (props.location == '/post-projects') {
             setPlaceData(props.projects)
         }
+        if(props.location == '/blog') {
+            setPlaceData(props.projects)
+        }
     },[])
 
 
@@ -31,7 +34,7 @@ function SideMenu(props) {
                 <h2 className="font-chrono text-xl antialiased tracking-wider">{props.location == '/post-projects' ? 'Index of videos' : props.location == '/web-projects' ? 'Index of projects' : ''}</h2>
                 <div>
                     {
-                        pathname == '/web-projects' || pathname == '/post-projects'? (
+                        pathname == '/web-projects' || pathname == '/post-projects' || pathname == '/blog' ? (
                             <ul >
                                 {
                                     list(effect)

@@ -1,21 +1,20 @@
-import { useState,useEffect } from "react";
-import ReactMarkdown from 'react-markdown'
+import { useLoaderData, useParams } from "react-router-dom";
+import BlogContainer from "../components/utils/BlogContainer";
 import { PagesContainer } from "../components/utils/PagesContainer";
+import { getProjects } from "../services/services";
+
+export async function entriesLoader() {
+    const projects = await getProjects('Entries')
+    return projects
+}
 
 function BlogPage(){
-    const [content, setContent] = useState("")
+    const params = useParams()
+    const projects = useLoaderData()
 
-    useEffect(() => {
-        fetch("./src/assets/entries/caida.md")
-          .then((res) => res.text())
-          .then((text) => setContent(text));
-      }, []);
     return(
         <PagesContainer>
-            <h1>Caida</h1>
-            <p className="whitespace-pre-line">
-                <ReactMarkdown children={content} skipHtml='true'  />
-            </p>            
+            <BlogContainer location='/blog' projects={projects} paramsProject={params.blogentry ? params.blogentry : 'caida'} />
         </PagesContainer>
     )
 }

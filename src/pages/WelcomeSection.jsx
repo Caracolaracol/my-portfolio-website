@@ -1,8 +1,8 @@
 import fotoyo1 from '../assets/yo.jpg'
 import fotoyo2 from '../assets/yo2.jpg'
 import { Link} from 'react-router-dom'
-import LoaderScreen from '../components/utils/LoaderScreen';
 import { useState, useEffect } from 'react';
+
 function WelcomeSection(){
     const [isLoading, setIsLoading] = useState(true);
 
@@ -25,7 +25,7 @@ function WelcomeSection(){
                     </div>
                     <div className='flex flex-col justify-evenly flex-nowrap text-center mb-6 tablet:mb-2 overflow-hidden px-2'>
                         <h1 className="overflow-hidden text-[2.4rem] font-bold font-tommy antialiased tablet:tracking-wide tablet:text-4xl laptop:text-6xl desktop:text-7xl laptop:tracking-normal">Caracolaracol <em className='text-naranjahover font-tommy font-black text-4xl tablet:text-3xl laptop:text-7xl'>//</em> Creative Developer</h1>
-                        <p className='text-sm font-tommyregular tablet:text-lg tablet:tracking-wide'># Hi there! I'm Agustín Rojas, i'm a web developer, <a className='text-naranja' href="https://open.spotify.com/album/34djgWmJuu2dNanqrupzok" target="_blank">musician</a>, <a className='text-naranja' href="https://caracolaracolracolacolcololl.blogspot.com/" target="_blank">writer</a>, photographer and motion designer based on Chile.</p>
+                        <p className='text-sm font-tommyregular tablet:text-lg tablet:tracking-wide'># Hi there! I'm Agustín Rojas, i'm a web developer, <a className='text-naranja' href="https://open.spotify.com/album/34djgWmJuu2dNanqrupzok" target="_blank">musician</a>, <Link className='text-naranja' to="/blog">writer</Link>, photographer and motion designer based on Chile.</p>
                         <h2 className='text-2xl font-chrono antialiased tablet:text-3xl laptop:text-4xl laptop:tracking-wide'>Welcome to my site!</h2>
                     </div>
                     <div  className='flex flex-row justify-center mb-4 gap-5 ml-3 mr-3'>

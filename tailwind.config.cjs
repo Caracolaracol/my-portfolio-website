@@ -17,10 +17,11 @@ module.exports = {
     colors: {
       // backgrounds
       negro: 'rgb(12,9,19)',
+      negroback: 'rgba(  58, 53, 71  , 0.8)',
       // components
-      purpural: 'rgba(48, 31, 104, 0.385)',
-      purpuralh: 'rgb(30, 18, 71)',
-      purpuraclaro: 'rgba(60, 41, 120, 0.682)',
+      purpural: 'rgb( 44, 40, 68 )',
+      purpuralh: 'rgb( 65, 57, 113 )',
+      purpuraclaro: 'rgba(60, 41, 120, 0.2)',
       //  text colors
       whitem: 'rgb(198, 198, 198)',
       texth: 'rgb(221,212,237)',
