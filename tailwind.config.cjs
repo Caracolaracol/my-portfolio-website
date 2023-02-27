@@ -23,7 +23,7 @@ module.exports = {
       purpuralh: 'rgb( 65, 57, 113 )',
       purpuraclaro: 'rgba(60, 41, 120, 0.2)',
       //  text colors
-      whitem: 'rgb(198, 198, 198)',
+      whitem: 'rgb(170, 170, 170)',
       texth: 'rgb(221,212,237)',
       naranja: 'rgb(147, 94, 48)',
       naranjahover: 'rgb(205, 117, 39)',

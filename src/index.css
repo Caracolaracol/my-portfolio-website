@@ -6,7 +6,8 @@
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   @apply text-whitem bg-negro;
-  background: linear-gradient(180deg, rgb(12, 9, 19) 0%, rgb(12, 9, 20) 75%, rgb(14, 9, 26) 100%);
+  background: linear-gradient(180deg, rgb(12, 9, 19) 0%, rgb(12, 9, 21) 80%, rgb(11, 1, 31) 100%);
+  
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
@@ -199,4 +200,7 @@ margin-right: auto;
 
 #markdown div p {
   @apply font-tommylight tracking-wider subpixel-antialiased 
+}
+.MuiListItem-root .MuiTouchRipple-child {
+  background-color: red !important;
 }

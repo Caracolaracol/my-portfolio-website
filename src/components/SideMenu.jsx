@@ -16,6 +16,7 @@ function SideMenu(props) {
         if(props.location == '/blog') {
             setPlaceData(props.projects)
         }
+        
     },[])
 
 
@@ -24,14 +25,14 @@ function SideMenu(props) {
         return (
             placeData && placeData.map((element) => <NavLink to={`${props.location}/${element.id}`} key={element.id} className={({ isActive }) =>
                 isActive ? `${classes.active}` : effect
-            } ><li className=' font-tommylight indent-1 laptop:text-[13px] desktop:text-[15px] tracking-wide antialiased hover:text-naranjahover'>- {element.name}</li></NavLink>)
+            } ><li className=' font-tommylight indent-1 laptop:text-[15px] desktop:text-[17px] tracking-wide antialiased hover:text-naranjahover'>- {props.location == '/blog' ? `${element.name} (${element.date[1]} ${element.date[0]})` :element.name }</li></NavLink>)
         )
     }
 
     return (
         <div className='hidden showindex laptop:block  w-48 h-[25rem] laptop:w-[19vw] desktop:w-[16vw] fixed top-40 left-0'>
             <div className="tablet:ml-2 laptop:ml-[1vw] desktop:ml-[1.2vw]">
-                <h2 className="font-chrono text-xl antialiased tracking-wider">{props.location == '/post-projects' ? 'Index of videos' : props.location == '/web-projects' ? 'Index of projects' : ''}</h2>
+                <h2 className="font-chrono text-xl antialiased tracking-wider">{props.location == '/post-projects' ? 'Index of videos' : props.location == '/web-projects' ? 'Index of projects' : props.location == '/blog' ? 'Blog Entries' : ''}</h2>
                 <div>
                     {
                         pathname == '/web-projects' || pathname == '/post-projects' || pathname == '/blog' ? (

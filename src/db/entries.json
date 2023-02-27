@@ -3,12 +3,14 @@
 		{
 			"id":"caida",
 			"name": "Caida",
+			"date": ["2023", "February", "26"],
 			"paragraphs": "../entries/caida.md",
 			"images": ["/imagecarousel/obsidianimage1.png", "/imagecarousel/obsidianimage2.png"]
 		},
 		{
 			"id":"lamontana",
 			"name": "La Montaña",
+			"date": ["2023", "February", "26"],
 			"paragraphs": "../entries/lamontana.md",
 			"images": ["/imagecarousel/obsidianimage1.png", "/imagecarousel/obsidianimage2.png"]
 		}

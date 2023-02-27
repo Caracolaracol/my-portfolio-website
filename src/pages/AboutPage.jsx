@@ -6,7 +6,7 @@ function AboutPage(){
 
     return (
         <PagesContainer>
-            <div className="max-w-[45rem]">
+            <div className="max-w-[45rem] showproject">
                 <div className="mb-6">
                     <h1 className="card-title font-tommyregular text-lg tracking-wider">Agustín Rojas - Fotógrafo macro
                     </h1>

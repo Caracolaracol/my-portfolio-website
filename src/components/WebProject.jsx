@@ -106,8 +106,8 @@ function WebProject (props) {
                 </div>
                 <div className="flex justify-between flex-col   tablet:h-[14rem] desktop:h-[12rem]">
                     <div key={dataProject.opinion} className="desktop:min-h-[9rem] transicioncorta flex flex-col justify-between">
-                        <div className='text-[1rem] font-tommylight tracking-wide antialiased text-justify' >{content}</div>
-                        <p className='text-[1rem] font-tommyregular tracking-wide antialiased italic'>
+                        <p className='text-[1rem] font-tommylight tracking-wider antialiased text-justify' >{content}</p>
+                        <p className='text-[1rem] font-tommyregular tracking-wider antialiased italic'>
                             {dataProject.opinion}
                         </p>
                     </div>
