@@ -1,6 +1,6 @@
 
 .active {
   @apply text-orangeclear;
-  filter: drop-shadow(2px 2px 7px rgb(82, 44, 3));
+  filter: drop-shadow(1px 1px 5px rgba(205, 116, 39, 0.736));
 }
 

@@ -7,16 +7,7 @@ function SideMenu(props) {
     const { pathname } = useLocation()
     const effect = `first:text-orangeclear`
     useEffect(() => {
-        if (props.location == '/web-projects') {
-            setPlaceData(props.projects)
-        }
-        if (props.location == '/post-projects') {
-            setPlaceData(props.projects)
-        }
-        if(props.location == '/blog') {
-            setPlaceData(props.projects)
-        }
-        
+        setPlaceData(props.projects)
     },[])
 
 

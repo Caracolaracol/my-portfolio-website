@@ -1,17 +1,17 @@
-import WebPage from '../pages/WebPage'
-import PostPage from '../pages/PostPage'
+import WebPage, { webProjectsLoader } from '../pages/WebPage'
+import PostPage, { postProjectsLoader } from '../pages/PostPage'
+import BlogPage, { entriesLoader } from '../pages/BlogPage'
+import WelcomeSection from '../pages/WelcomeSection'
 import ErrorPage from '../ErrorPage'
 import { createBrowserRouter} from 'react-router-dom'
-import WelcomeSection from '../pages/WelcomeSection'
 import Root from '../root/Root'
-import { webProjectsLoader } from '../pages/WebPage'
 import WebProjectContainer from '../components/utils/WebProjectContainer'
-import { postProjectsLoader } from '../pages/PostPage'
 import PostProjectContainer from '../components/utils/PostProjectContainer'
-import BlogPage, { entriesLoader } from '../pages/BlogPage'
 import BlogContainer from '../components/utils/BlogContainer'
 import AboutPage from '../pages/AboutPage'
 import Admin from '../pages/Admin'
+
+
 export const router = createBrowserRouter([
   {
     path: '/',

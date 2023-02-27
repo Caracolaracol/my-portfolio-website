@@ -10,6 +10,8 @@ import "swiper/css/pagination";
 
 import "../index.css";
 import { GeneralContext } from "../context/general-context";
+import { ShowProjects } from "./utils/ShowProjects";
+
 function PostProject (props) {
     const { pathname } = useLocation()
     const [dataProject, setDataProject] = useState({})
@@ -24,38 +26,17 @@ function PostProject (props) {
 
     const params = props.paramsProject
     const projects = props.projects
+
     useEffect(() => {
         window.scrollTo({top: 0, behavior: 'smooth'});
-      }, [pathname]);
+    }, [pathname]);
+
     useEffect(()=> {
-            
-        const currentProject = projects.find((el)=>el.id === params)
-        const indexCurr = projects.indexOf(currentProject)
-        const nextProject = projects[indexCurr+1]
-        const prevProject = projects[indexCurr-1]
-        setPrevData(prevProject)
-        const lastArrayIndex = projects.length - 1
-        if(indexCurr - 1 < 0) {
-            setAtStart(true)
-        } else {
-            setAtStart(false)
-        }
-        if (indexCurr == lastArrayIndex){
-            setAtEnd(true)
-        } else {
-            if( prevProject == undefined ) {
-            } else {
-                setPrevData(prevProject)
-            }
-            setNextData(nextProject)
-            setAtEnd(false)
-        }
+        const currentProject = ShowProjects(projects, params, setNextData, setPrevData, setAtEnd, setAtStart)
         setDataProject(currentProject)
         setImages(currentProject.images)
         setTech(currentProject.technologies)
         setDescription(currentProject.description)
-    
-    
 },[params,dataProject,images,description])
       
     return (

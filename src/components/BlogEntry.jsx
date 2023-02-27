@@ -1,8 +1,10 @@
 import { useEffect, useState} from "react"
-import { Link } from "react-router-dom";
-import { useLocation } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
+
+import { ShowProjects } from "./utils/ShowProjects";
 import "../index.css";
+
 
 function BlogEntry(props) {
     const { pathname } = useLocation()
@@ -22,29 +24,8 @@ function BlogEntry(props) {
 
       
     useEffect(() => {
-        const currentProject = projects.find((el)=>el.id === params)
-        const indexCurr = projects.indexOf(currentProject)
-        const nextProject = projects[indexCurr+1]
-        const prevProject = projects[indexCurr-1]
-        setPrevData(prevProject)
-        const lastArrayIndex = projects.length - 1
-        if(indexCurr - 1 < 0) {
-            setAtStart(true)
-        } else {
-            setAtStart(false)
-        }
-        if (indexCurr == lastArrayIndex){
-            setAtEnd(true)
-        } else {
-            if( prevProject == undefined ) {
-            } else {
-                setPrevData(prevProject)
-            }
-            setNextData(nextProject)
-            setAtEnd(false)
-        }
+        const currentProject = ShowProjects(projects, params, setNextData, setPrevData, setAtEnd, setAtStart)
         setDataEntry(currentProject)
-         
     },[params,dataEntry])
 
     const fetchdata = () => {

@@ -1,13 +1,16 @@
-import logo1 from '../assets/logo1.png'
+
 import { Link, NavLink } from 'react-router-dom'
 import NavBar from './NavBar'
 import { useContext, useEffect, useState } from 'react';
 import { GeneralContext } from '../context/general-context';
 import { useRef } from 'react';
-import {  Menu, Tooltip,MenuItem, Avatar, Divider, Box, IconButton } from '@mui/material';
+import {  Menu, Tooltip,MenuItem, Divider, Box, IconButton } from '@mui/material';
+
+import logo1 from '../assets/logo1.png'
 import menuicon from '/icons/menu.png'
 import classes from './NavBar.module.css'
 import '../index.css'
+
 function Header() {
     const scollToRef = useRef();
     const { setScroll } = useContext(GeneralContext)

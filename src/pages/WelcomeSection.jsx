@@ -14,7 +14,7 @@ function WelcomeSection(){
     }, []);
 
     return (
-        <div className=' h-fit w-100'>
+        <div className=' h-fit w-100 transicioncorta'>
             <section key='welcome' className={`flex flex-col h-screen justify-center ${isLoading ? 'opacity-0' : 'opacity-100 transition-opacity duration-700'} `}>
                 <div className='self-center  tablet:mb-16 overflow-hidden'>
                     <div className='w-64 h-64 mx-auto tablet:w-72 tablet:h-72 overflow-hidden flex justify-center text-center'>
