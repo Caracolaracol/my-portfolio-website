@@ -27,9 +27,9 @@ function NavBar() {
             <ul className='flex space-evenly items-center flex-row tablet:gap-3 laptop:gap-6'>
                 {
                     navNames.map(s => (
-                        <li>
+                        <li key={s.name}>
                             <NavLink
-                                key={s.name}
+                                
                                 to={s.direccion}
                                 className={({ isActive }) =>
                                     isActive ? `${styles} ${classes.active}` : `${styles}`

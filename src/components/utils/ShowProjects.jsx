@@ -1,5 +1,5 @@
 
-export function ShowProjects(projects, params, setNextData, setPrevData, setAtEnd, setAtStart) {
+const ShowProjects = (projects, params, setNextData, setPrevData, setAtEnd, setAtStart) => {
         const currentProject = projects.find((el)=>el.id === params)
         const indexCurr = projects.indexOf(currentProject)
         const nextProject = projects[indexCurr+1]
@@ -23,3 +23,4 @@ export function ShowProjects(projects, params, setNextData, setPrevData, setAtEn
         }
         return currentProject
 }
+export  {ShowProjects}

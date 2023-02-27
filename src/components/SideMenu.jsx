@@ -12,7 +12,6 @@ function SideMenu(props) {
 
 
     const list = (effect) => {
-
         return (
             placeData && placeData.map((element) => <NavLink to={`${props.location}/${element.id}`} key={element.id} className={({ isActive }) =>
                 isActive ? `${classes.active}` : effect
