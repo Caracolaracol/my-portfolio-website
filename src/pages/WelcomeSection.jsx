@@ -52,8 +52,6 @@ function WelcomeSection(){
                 <div className='tablet:h-20 tablet:w-20'>
                 </div>
             </section>
-
-
         </div>
     )
 }

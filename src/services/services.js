@@ -14,21 +14,3 @@ export const getProjects = async (type) => {
         return Entries
     }
 }   
-
-export const getSingleWebProject = async (params) => {
-    const { WebProjects } = db
-    const data = WebProjects.find((el)=>el.id === params)
-    return data
-
-}
-
-
-export const getNextProject = async (id) => {
-    const { WebProjects } = db 
-    const currentProject = WebProjects.find((el)=>el.id === id)
-    const indexCurr = WebProjects.indexOf(currentProject)
-    let data =  WebProjects[indexCurr+1]
-    console.log(data)
-    return data
-    
-}

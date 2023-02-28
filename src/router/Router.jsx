@@ -5,12 +5,9 @@ import WelcomeSection from '../pages/WelcomeSection'
 import ErrorPage from '../ErrorPage'
 import { createBrowserRouter} from 'react-router-dom'
 import Root from '../root/Root'
-import WebProjectContainer from '../components/utils/WebProjectContainer'
-import PostProjectContainer from '../components/utils/PostProjectContainer'
-import BlogContainer from '../components/utils/BlogContainer'
 import AboutPage from '../pages/AboutPage'
 import Admin from '../pages/Admin'
-
+import { WebProjectContainer, PostProjectContainer, BlogContainer } from '../components/utils/Containers'
 
 export const router = createBrowserRouter([
   {

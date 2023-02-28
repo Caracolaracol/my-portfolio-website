@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom'
-import { Menu, MenuItem, Box } from '@mui/material';
+import { Menu, MenuItem } from '@mui/material';
 import menuicon from '/icons/menusolid.svg'
 import classes from './NavBar.module.css'
 

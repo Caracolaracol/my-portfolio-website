@@ -12,9 +12,11 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+
 html {
   @apply bg-negro
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -126,17 +128,13 @@ html {
   margin-left: auto;
 margin-right: auto;
 }
-
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
-
 .swiper-slide img {
   display: block;
   width: 100%;
@@ -151,7 +149,6 @@ margin-right: auto;
   filter: drop-shadow(0px 0px 2px rgb(82, 44, 3));
 }
 .swiper-button-prev {
-
   background-image: url('./assets/previo.png');
   background-repeat: no-repeat;
   background-size: auto 100%;
@@ -160,53 +157,16 @@ margin-right: auto;
 .swiper-button-prev::after {
   content: '';
 }
-
 .swiper-button-next {
   background-image: url('./assets/proximo.png');
   background-repeat: no-repeat;
   background-size: auto 100%;
   background-position: center;
-
 }
 .swiper-button-next::after {
   content: '';
 }
-/* .swiper-button-prev {
-  background-image: url('./assets/prev.png');
-  background-repeat: no-repeat;
-  background-size: auto 100%;
-  background-position: center;
-  clip-path: circle(50%);
-}
-.swiper-button-prev::after {
-  content: '';
-  background-image: url('./assets/next.png');
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  background-position: center;
-}
 
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.swiper-button-next {
-  background-image: url('./assets/next.png');
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  background-position: center;
-  clip-path: circle(50%);
-  z-index: 99;
-}
-.swiper-button-next::after {
-  content: '';
-  background-image: url('./assets/next.png');
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  background-position: center;
-} */
 
 .swiper-button-prev, .swiper-button-next {
     filter: drop-shadow(2px 2px 7px rgb(82, 44, 3));
@@ -230,7 +190,4 @@ margin-right: auto;
 
 #markdown div p {
   @apply font-tommylight tracking-wider subpixel-antialiased;
-}
-.MuiListItem-root .MuiTouchRipple-child {
-  background-color: red !important;
 }

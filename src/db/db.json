@@ -3,7 +3,7 @@
 		{
 			"id":"obsidian",
 			"name": "Obsidian",
-			"description": "This is a clone of the <a class='text-naranja hover:text-naranjahover' href='https://obsidian.md/' target='_blank' >Obsidian website</a>, made for improving my developing skills. It  is the landing page of the site. I tried to make this page without seeing the original html because I thought that doing it this way would make it harder to clone.",
+			"description": "This is a clone of the <a class='text-naranja hover:text-naranjahover' href='https://obsidian.md/' target='_blank' >Obsidian website</a>, made for improving my developing skills. It  is the landing page of the site. I tried to make this page without seeing the original html because I thought that doing it this way would make it harder to clone. This is one of the first web projects that I did.",
 			"opinion": "Obsidian its a software that I like very much, I really recommend you to try it!",
 			"images": ["/imagecarousel/obsidianimage1.png", "/imagecarousel/obsidianimage2.png"],
 			"github": "https://github.com/Caracolaracol/ObsidianProject",
@@ -24,14 +24,14 @@
 				"idtech": "sass",
 				"name": "SASS",
 				"img": "/icons/sasscol.svg",
-				"description": "CSS extension for preprocessing the styles in a more eficient way"
+				"description": "SASS its a CSS extension for preprocessing the styles in a more eficient way"
 				}
 			]
 		},
 		{	
 			"id": "ironplantcl",
 			"name": "Ironplant.cl",
-			"description": "This is a Remake of the <a class='text-naranja hover:text-naranjahover' href='https://www.ironplant.cl/' target='_blank' >Ironplant website</a>, a Vegan brand selling food supplements. It is the final project I made for the React Js bootcamp at Coderhouse. In this project you can actually simulate a purchase, it has itemlists, filtered items, item details, cart and a checkout form.",
+			"description": "This is a Remake of the <a class='text-naranja hover:text-naranjahover' href='https://www.ironplant.cl/' target='_blank' >Ironplant website</a>, a Vegan brand selling food supplements. I did this site for the final project of the React Js bootcamp at Coderhouse, where I learned a lot of my Web Development Skills. In this project you can actually simulate a purchase, it has itemlists, filtered items, item details, cart and a checkout form.",
 			"opinion": "Don't forget your B12!",
 			"images": ["/imagecarousel/ironplant1.png", "/imagecarousel/ironplant2.png"],
 			"github":"https://github.com/Caracolaracol/ReactJsFinal-coderhouse",
@@ -41,26 +41,26 @@
 				"idtech": "react",
 				"name": "React JS",
 				"img": "/icons/react.svg",
-				"description": "One library to rule them all"
+				"description": "ReactJs: One library to rule them all"
 				},
 				{
 				"idtech": "mui",
 				"name": "MateriaUI",
 				"img": "/icons/mui.svg",
-				"description": "Some components made with mui. It's faster"
+				"description": "MaterialUI: Some components made with mui. It's faster"
 				},
 				{
 				"idtech": "firebase",
 				"name": "Firebase",
 				"img": "/icons/firebase.svg",
-				"description": "The database of products and customers are located in firebase"
+				"description": "Firebase: The database of products and customers are located here"
 				}
 			]
 		},
 		{
 			"id":"myportfolio",
 			"name": "My Portfolio",
-			"description": "This is my porfolio and I'm showing you this project while you browse through this site. It contains all my art and web development works and also a blog where I write some stuff of my interest and some tales of mine.",
+			"description": "This is my portfolio Website, and you are actually here. As you can see, this site contains all my art and web development works and also a blog where I write some stuff of my interest and some tales of mine. It is still in development because this site will be the center of my activity on the internet and in that sense I'll continously update the site with new stuff as I learn to implement new technologies.",
 			"opinion": "Thanks for being here!",
 			"images": ["/imagecarousel/portfolio1.png", "/imagecarousel/portfolio2.png"],
 			"github":"https://github.com/Caracolaracol/portfolio",
@@ -76,19 +76,19 @@
 				"idtech": "tailwind",
 				"name": "Tailwind CSS",
 				"img": "/icons/tailwind.svg",
-				"description": "My favorite CSS Framework, It is just awesome"
+				"description": "Tailwind is my favorite CSS Framework, It is just awesome"
 				},
 				{
 				"idtech": "swiper",
 				"name": "Swiper JS",
 				"img": "/icons/swiper.svg",
-				"description": "I used this tool for the 'carousel' like sliders that are in each project page."
+				"description": "SwiperJS: I used this tool for the 'carousel' like sliders that are in each project page."
 				},
 				{
 				"idtech": "reactrouter",
 				"name": "React Router",
 				"img": "/icons/reactrouter.svg",
-				"description": "Routing tool for React, I used it with the new updates (since 6.4v) and its awesome"
+				"description": "ReactRouter: Routing tool for React, I used it with the new updates (since 6.4v) and its awesome"
 				}
 
 			]

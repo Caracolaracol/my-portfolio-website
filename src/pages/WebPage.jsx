@@ -1,14 +1,14 @@
 import { useContext, useEffect } from 'react'
 import { useLoaderData, useParams } from 'react-router-dom'
-import { PagesContainer } from '../components/utils/PagesContainer'
-import WebProjectContainer from '../components/utils/WebProjectContainer'
+
 import { getProjects } from '../services/services'
 import { GeneralContext } from "../context/general-context";
+import { PagesContainer, WebProjectContainer } from '../components/utils/Containers'
+
 export async function webProjectsLoader() {
     const projects = await getProjects('WebProjects')
     return projects
 }
-
 
 function WebPage() {
     const { setProjectsContext, setParamsContext, setLocationSection} = useContext(GeneralContext)

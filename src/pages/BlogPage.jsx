@@ -1,9 +1,11 @@
+import { useContext, useEffect } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
-import BlogContainer from "../components/utils/BlogContainer";
-import { PagesContainer } from "../components/utils/PagesContainer";
+import { BlogContainer, PagesContainer } from "../components/utils/Containers";
 import { GeneralContext } from "../context/general-context";
 import { getProjects } from "../services/services";
-import { useContext, useEffect } from "react";
+
+
+
 export async function entriesLoader() {
     const projects = await getProjects('Entries')
     return projects

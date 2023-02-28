@@ -1,14 +1,10 @@
 
 import { Link } from 'react-router-dom'
-import { useContext, useEffect, useState, useRef } from 'react';
+import { useContext, useEffect, useRef } from 'react';
 
 import { GeneralContext } from '../context/general-context';
 import NavBar from './NavBar'
-
-
-
 import logo1 from '../assets/logo1.png'
-
 import '../index.css'
 import MenuNav from './MenuNav';
 import SideMenuNav from './SideMenuNav';
