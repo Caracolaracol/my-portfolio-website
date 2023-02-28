@@ -36,15 +36,21 @@ function MenuNav() {
     ]
 
     return (
-        <Box>
+        <div>
 
 
 
             {/* <img src={menuicon} onClick={handleClick} className='w-[32px] h-[36px]' /> */}
-            <div onClick={handleClick} className='mr-1 flex flex-col cursos bg-purpuraclaro svgmorado rounded-full p-[9px]'>
-                <em className=' text-naranjahover font-tommybold font-black text-2xl svg  '>//</em>
-                {/* <p className='font-tommy text-[0.7rem] antialiased text-left p-[1px]'>Menu</p> */}
+            <div onClick={handleClick} className='flex flex-col h-16 justify-end mb-1'>
+                <div  className='flex justify-center cursos bg-purpuraclaro svgmorado rounded-full w-16 h-10 items-center'>
+                    <em className=' text-naranjahover font-tommybold font-black text-xl svg'>//</em>
+                    
+                </div>
+                <div>
+                    <p className='font-tommylight text-[0.6rem] opacity-80 antialiased text-center pt-[1px]'>Menu</p>
+                </div>
             </div>
+            
 
             <Menu
                 anchorEl={anchorEl}
@@ -110,7 +116,7 @@ function MenuNav() {
                     ))
                 }
             </Menu>
-        </Box>
+        </div>
     )
 }
 
