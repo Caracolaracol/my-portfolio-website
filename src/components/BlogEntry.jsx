@@ -39,8 +39,10 @@ function BlogEntry(props) {
     return (
         <div className="showproject transicioncorta p-2 max-w-[45rem]">
             <div className="showproject">
-                <h1 key={dataEntry.name} className="transicioncorta ">{dataEntry.name}</h1>
+                <div className="border-b-[1px] border-spacing-2 border-whitem border-opacity-20 mb-6 transicioncorta">
+                    <h1 key={dataEntry.name} className={`text-xl tablet:text-3xl laptop:text-4xl desktop:text-5xl leading-tight font-tommy min-h-max pl-2 pb-2 transicioncorta`}>{dataEntry.name}   </h1>
                 </div>
+            </div>
             <div id='markdown' className="showproject">
                 <ReactMarkdown className="whitespace-pre-line text-justify">{content}</ReactMarkdown>
             </div>

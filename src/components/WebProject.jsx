@@ -60,7 +60,7 @@ function WebProject (props) {
 
     return (
         <div>
-            <div className="showproject">
+            <div className="showproject ">
                 <div className="border-b-[1px] border-spacing-2 border-whitem border-opacity-20 mb-6 transicioncorta">
                     <h1 key={dataProject.name} className={`text-xl tablet:text-3xl laptop:text-4xl desktop:text-5xl leading-tight font-tommy min-h-max pl-2 pb-2 transicioncorta`}>{dataProject.name}   </h1>
                 </div>
@@ -85,7 +85,7 @@ function WebProject (props) {
                 <div className=' min-w-full h-6'>
                 </div>
 
-                <div className="flex justify-between flex-col   tablet:h-[14rem] desktop:h-[12rem]">
+                <div className="flex flex-col   tablet:min-h-[21rem] laptop:min-h-[18rem]">
                     <div key={dataProject.opinion} className="desktop:min-h-[9rem] transicioncorta flex flex-col justify-between">
                         <p className='text-[1rem] font-tommylight tracking-wider antialiased text-justify' >{content}</p>
                         <p className='text-[1rem] font-tommyregular tracking-wider antialiased italic'>
@@ -98,10 +98,10 @@ function WebProject (props) {
                     <TechAndLinks tech={tech} dataProject={dataProject}/>
                 </div>
 
-                <div className=' min-w-full tablet:h-[5rem] laptop:h-[6rem]'>
-                </div>
 
             </div>
+            <div className=" mt-4 mb-4 desktop:mt-6 desktop:mb-6 w-[50%] flex mx-auto">
+                    </div>
             <div className='flex justify-end min-w-full gap-2'>
                 <div className="w-36 tablet:w-44">
                     {atStart ? null : <Link to={`/web-projects/${prevData.id ? prevData.id : null}`}>
