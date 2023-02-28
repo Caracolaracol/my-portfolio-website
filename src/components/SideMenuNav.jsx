@@ -49,6 +49,7 @@ function SideMenuNav(){
     return (
         <div className='flex justify-center items-center self-center'>
             <img src={menuhexagon} onClick={handleClick} className='w-[27px] h-[28px] ' />
+            
             <Menu
                             anchorEl={anchorEl}
                             id="account-menu"

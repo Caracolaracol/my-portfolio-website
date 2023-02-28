@@ -35,9 +35,9 @@ function Header() {
                     <NavBar />
                 </div>
                 <div className='laptop:hidden flex'>
-                    <div className='laptop:hidden mr-4 flex justify-center items-center'>
+                    {/* <div className='laptop:hidden mr-4 flex justify-center items-center'>
                         <SideMenuNav />
-                    </div>
+                    </div> */}
                     <div className='laptop:hidden mr-4'>
                         <MenuNav/>
                     </div>

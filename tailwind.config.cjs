@@ -10,7 +10,8 @@ module.exports = {
         tommy: ['Tommy'],
         chrono: ['ChronoType'],
         tommylight: ['TommyLight'],
-        tommyregular: ['TommyRegular']
+        tommyregular: ['TommyRegular'],
+        tommybold: ['TommyBold']
       },
 
     },

@@ -36,12 +36,15 @@ function MenuNav() {
     ]
 
     return (
-        <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'center' }}>
+        <Box>
 
 
 
-            <img src={menuicon} onClick={handleClick} className='w-[32px] h-[36px]' />
-
+            {/* <img src={menuicon} onClick={handleClick} className='w-[32px] h-[36px]' /> */}
+            <div onClick={handleClick} className='mr-1 flex flex-col cursos bg-purpuraclaro svgmorado rounded-full p-[9px]'>
+                <em className=' text-naranjahover font-tommybold font-black text-2xl svg  '>//</em>
+                {/* <p className='font-tommy text-[0.7rem] antialiased text-left p-[1px]'>Menu</p> */}
+            </div>
 
             <Menu
                 anchorEl={anchorEl}
