@@ -6,6 +6,7 @@
 			"description": "This is a clone of the <a class='text-naranja hover:text-naranjahover' href='https://obsidian.md/' target='_blank' >Obsidian website</a>, made for improving my developing skills. It  is the landing page of the site. I tried to make this page without seeing the original html because I thought that doing it this way would make it harder to clone. This is one of the first web projects that I did.",
 			"opinion": "Obsidian its a software that I like very much, I really recommend you to try it!",
 			"images": ["/imagecarousel/obsidianimage1.png", "/imagecarousel/obsidianimage2.png"],
+			"illustrations": "/illustrations/ranaobsidian.png",
 			"github": "https://github.com/Caracolaracol/ObsidianProject",
 			"technologies": [
 				{

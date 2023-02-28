@@ -61,8 +61,9 @@ function WebProject (props) {
     return (
         <div>
             <div className="showproject ">
-                <div className="border-b-[1px] border-spacing-2 border-whitem border-opacity-20 mb-6 transicioncorta">
+                <div className="border-b-[1px] border-spacing-2 border-whitem border-opacity-20 mb-6 transicioncorta flex justify-between">
                     <h1 key={dataProject.name} className={`text-xl tablet:text-3xl laptop:text-4xl desktop:text-5xl leading-tight font-tommy min-h-max pl-2 pb-2 transicioncorta`}>{dataProject.name}   </h1>
+                    
                 </div>
 
                 <div key={dataProject.name} className=' w-[100%] h-[100%] border-[1px] border-spacing-2 border-whitem border-opacity-10 transicioncorta'>
@@ -86,13 +87,17 @@ function WebProject (props) {
                 </div>
 
                 <div className="flex flex-col   tablet:min-h-[21rem] laptop:min-h-[18rem]">
-                    <div key={dataProject.opinion} className="desktop:min-h-[9rem] transicioncorta flex flex-col justify-between">
+                    <div key={dataProject.opinion} className="desktop:min-h-[9rem] transicioncorta">
+                        <div className="text-left">
+                            <img src={dataProject.illustrations} className='w-44 tablet:w-64 float-right ml-6 svg mr-6' />
+                        </div>
                         <p className='text-[1rem] font-tommylight tracking-wider antialiased text-justify' >{content}</p>
-                        <p className='text-[1rem] font-tommyregular tracking-wider antialiased italic'>
+                        
+                        
+                    </div>
+                    <p className='text-[1rem] font-tommyregular tracking-wider antialiased italic'>
                             {dataProject.opinion}
                         </p>
-                    </div>
-
                     <div className="border-b-[1px] border-whitem border-opacity-20 mt-4 mb-4 desktop:mt-6 desktop:mb-6 w-[80%] flex mx-auto">
                     </div>
                     <TechAndLinks tech={tech} dataProject={dataProject}/>
