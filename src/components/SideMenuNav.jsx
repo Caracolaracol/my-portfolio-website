@@ -24,7 +24,7 @@ function SideMenuNav(){
 
     const list = (effect) => {
         return (
-            placeData && placeData.map((element) => (
+            projectsContext && projectsContext.map((element) => (
                 <MenuItem
                     key={element.id}
                     onClick={handleClose}
