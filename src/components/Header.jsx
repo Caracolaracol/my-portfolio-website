@@ -38,7 +38,7 @@ function Header() {
                     {/* <div className='laptop:hidden mr-4 flex justify-center items-center'>
                         <SideMenuNav />
                     </div> */}
-                    <div className='laptop:hidden mr-2'>
+                    <div key='menunav' className='laptop:hidden mr-2  transicioncorta'>
                         <MenuNav/>
                     </div>
                     

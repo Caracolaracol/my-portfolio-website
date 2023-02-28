@@ -209,7 +209,7 @@ margin-right: auto;
 }
 
 #markdown div p {
-  @apply font-tommylight tracking-wider subpixel-antialiased 
+  @apply font-tommylight tracking-wider subpixel-antialiased;
 }
 .MuiListItem-root .MuiTouchRipple-child {
   background-color: red !important;
