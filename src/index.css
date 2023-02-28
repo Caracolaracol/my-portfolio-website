@@ -150,7 +150,27 @@ margin-right: auto;
   background: rgb(224, 166, 133);
   filter: drop-shadow(0px 0px 2px rgb(82, 44, 3));
 }
+.swiper-button-prev {
 
+  background-image: url('./assets/previo.png');
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: center;
+}
+.swiper-button-prev::after {
+  content: '';
+}
+
+.swiper-button-next {
+  background-image: url('./assets/proximo.png');
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: center;
+
+}
+.swiper-button-next::after {
+  content: '';
+}
 /* .swiper-button-prev {
   background-image: url('./assets/prev.png');
   background-repeat: no-repeat;
