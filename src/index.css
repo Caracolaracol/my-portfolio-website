@@ -151,6 +151,7 @@ margin-right: auto;
 }
 .swiper-button-prev {
   background-image: url('./assets/previo.png');
+  
   background-repeat: no-repeat;
   background-size: auto 100%;
   background-position: center;
@@ -171,7 +172,8 @@ margin-right: auto;
 
 .swiper-button-prev, .swiper-button-next {
     filter: drop-shadow(2px 2px 7px rgb(82, 44, 3));
-    color: rgb(224, 166, 133);
+    color: rgb(184, 141, 103);
+    filter: hue-rotate(-10deg) saturate(70%);
 }
 
 .TooltipArrow {

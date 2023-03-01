@@ -67,7 +67,7 @@ function PostProject (props) {
                     </div>
                 </div>
                 
-                <div className="tablet:flex tablet:justify-between ">
+                <div className="tablet:flex tablet:justify-between bg-[#000] rounded-tr-sm rounded-br-sm bg-opacity-30 p-4">
                         <div>
                             <h2 className='font-chrono text-[1.7rem]'>
                                 Tools I used

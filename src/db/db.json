@@ -68,6 +68,7 @@
 			"opinion": "Thanks for being here!",
 			"images": ["/imagecarousel/portfolio1.png", "/imagecarousel/portfolio2.png"],
 			"imagesmobile": ["/imagecarousel/portfoliomobile1.jpg", "/imagecarousel/portfoliomobile2.jpg"],
+			"illustrations": "/illustrations/caracoltecla.png",
 			"github":"https://github.com/Caracolaracol/portfolio",
 			"link": "https://caracolaracol-portfolio.vercel.app/",
 			"technologies":[
@@ -136,6 +137,7 @@
 			"opinion": "Proud of it!",
 			"images": ["/imagecarousel/firstsite1.png", "/imagecarousel/firstsite2.png"],
 			"imagesmobile": ["/imagecarousel/firstsitemobile1.jpg", "/imagecarousel/firstsitemobile2.jpg"],
+			
 			"github":"https://github.com/Caracolaracol/CaracolFirstSIte",
 			"link": "https://caracolaracol.github.io/CaracolFirstSIte/",
 			"technologies": [
