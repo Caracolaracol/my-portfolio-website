@@ -14,7 +14,8 @@
 }
 
 html {
-  @apply bg-negro
+  @apply bg-negro;
+  scroll-behavior: smooth;
 }
 
 * {

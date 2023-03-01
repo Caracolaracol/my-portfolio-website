@@ -3,9 +3,10 @@
 		{
 			"id":"obsidian",
 			"name": "Obsidian",
-			"description": "This is a clone of the <a class='text-naranja hover:text-naranjahover' href='https://obsidian.md/' target='_blank' >Obsidian website</a>, made for improving my developing skills. It  is the landing page of the site. I tried to make this page without seeing the original html because I thought that doing it this way would make it harder to clone. This is one of the first web projects that I did.",
+			"description": "This is a clone of the <a class='text-naranja hover:text-naranjahover' href='https://obsidian.md/' target='_blank' >Obsidian website</a>, made for improving my developing skills. Obsidian its like a note taking app but with extra features, you can make it a knowledge base for your life, and with his capabilites obsidian its able to work like a second brain for the user. As a developer I find obsidian a really useful tool where I write down my notes, useful codes and basically everything I know I'll need in some future. <br />In this project I made the landing page of the site. I tried to make this page without seeing the original html because I thought that doing it this way would make it harder to clone. It's one of the first web projects that I did.",
 			"opinion": "Obsidian its a software that I like very much, I really recommend you to try it!",
 			"images": ["/imagecarousel/obsidianimage1.png", "/imagecarousel/obsidianimage2.png"],
+			"imagesmobile": ["/imagecarousel/obsidianmobile1.jpg", "/imagecarousel/obsidianmobile2.jpg"],
 			"illustrations": "/illustrations/ranaobsidian.png",
 			"github": "https://github.com/Caracolaracol/ObsidianProject",
 			"technologies": [
@@ -35,6 +36,7 @@
 			"description": "This is a Remake of the <a class='text-naranja hover:text-naranjahover' href='https://www.ironplant.cl/' target='_blank' >Ironplant website</a>, a Vegan brand selling food supplements. I did this site for the final project of the React Js bootcamp at Coderhouse, where I learned a lot of my Web Development Skills. In this project you can actually simulate a purchase, it has itemlists, filtered items, item details, cart and a checkout form.",
 			"opinion": "Don't forget your B12!",
 			"images": ["/imagecarousel/ironplant1.png", "/imagecarousel/ironplant2.png"],
+			"imagesmobile": ["/imagecarousel/ironplantmobile1.jpg", "/imagecarousel/ironplantmobile2.jpg"],
 			"illustrations": "/illustrations/rana2.png",
 			"github":"https://github.com/Caracolaracol/ReactJsFinal-coderhouse",
 			"link": "https://reactjsfinal-coderhouse.vercel.app/",
@@ -65,6 +67,7 @@
 			"description": "This is my portfolio Website, and you are actually here. As you can see, this site contains all my art and web development works and also a blog where I write some stuff of my interest and some tales of mine. It is still in development because this site will be the center of my activity on the internet and in that sense I'll continously update the site with new stuff as I learn to implement new technologies.",
 			"opinion": "Thanks for being here!",
 			"images": ["/imagecarousel/portfolio1.png", "/imagecarousel/portfolio2.png"],
+			"imagesmobile": ["/imagecarousel/portfoliomobile1.jpg", "/imagecarousel/portfoliomobile2.jpg"],
 			"github":"https://github.com/Caracolaracol/portfolio",
 			"link": "https://caracolaracol-portfolio.vercel.app/",
 			"technologies":[
@@ -101,6 +104,7 @@
 			"description": "This is a language course platform, I worked at this project as a team made up of the best students of the latest bootcamps of web development and web design at 'Coderhouse' an e-learning platform based in Argentina, so it was a excelent job experience and the result was this site made for a language course institute, they teach English, Spanish, Italian and Portuguese",
 			"opinion": "Grazie mille!",
 			"images": ["/imagecarousel/obsidianimage1.png", "/imagecarousel/obsidianimage2.png"],
+			"imagesmobile": ["/imagecarousel/obsidianmobile1.jpg", "/imagecarousel/obsidianmobile2.jpg"],
 			"github":"https://github.com/Caracolaracol/languageSpin-project",
 			"link": "https://language-spin.vercel.app/",
 			"technologies":[
@@ -131,6 +135,7 @@
 			"description": "The first site that I made. I'ts a site about myself as a photographer with a store of prints of macrophotography of insects and a blog.",
 			"opinion": "Proud of it!",
 			"images": ["/imagecarousel/firstsite1.png", "/imagecarousel/firstsite2.png"],
+			"imagesmobile": ["/imagecarousel/firstsitemobile1.jpg", "/imagecarousel/firstsitemobile2.jpg"],
 			"github":"https://github.com/Caracolaracol/CaracolFirstSIte",
 			"link": "https://caracolaracol.github.io/CaracolFirstSIte/",
 			"technologies": [
@@ -168,6 +173,7 @@
 			"description": "This is a project that I did for the challenges of the Javascript Course at Coderhouse, It is a pokemon center simulator but privatized and it charges a certain amount of money to heal your pokemons. It is made with the pokeAPI, with that I got all the data of your pokemons, including the sprites.",
 			"opinion": "using pokeAPI its a great way to learn to use APIs and fetch data from databases!",
 			"images": ["/imagecarousel/centropokemon1.png", "/imagecarousel/centropokemon2.png"],
+			"imagesmobile": ["/imagecarousel/centropokemonmobile1.png", "/imagecarousel/centropokemonmobile2.png"],
 			"github":"https://github.com/Caracolaracol/jsFinal-coderhouse",
 			"link": "",
 			"technologies": [

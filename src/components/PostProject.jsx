@@ -13,7 +13,6 @@ import { GeneralContext } from "../context/general-context";
 import { ShowProjects } from "./utils/ShowProjects";
 
 function PostProject (props) {
-    const { pathname } = useLocation()
     const [dataProject, setDataProject] = useState({})
     const [nextData, setNextData] = useState({})
     const [prevData, setPrevData] = useState({})
@@ -26,10 +25,6 @@ function PostProject (props) {
 
     const params = props.paramsProject
     const projects = props.projects
-
-    useEffect(() => {
-        window.scrollTo({top: 0, behavior: 'smooth'});
-    }, [pathname]);
 
     useEffect(()=> {
         const currentProject = ShowProjects(projects, params, setNextData, setPrevData, setAtEnd, setAtStart)

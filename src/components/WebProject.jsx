@@ -1,9 +1,8 @@
-import { useEffect, useState, useContext, Fragment, createElement } from "react"
-import { Link, useLocation} from "react-router-dom"
+import { useEffect, useState, Fragment, createElement, useContext } from "react"
+import { Link} from "react-router-dom"
 import { Swiper, SwiperSlide } from "swiper/react";
-
-import { Pagination, Navigation, Zoom } from "swiper";
 import { GeneralContext } from "../context/general-context";
+import { Pagination, Navigation, Zoom } from "swiper";
 import { unified } from "unified";
 import rehypeParse from "rehype-parse";
 import rehypeReact from "rehype-react";
@@ -21,31 +20,28 @@ import { ShowProjects } from "./utils/ShowProjects";
 
 
 function WebProject (props) {
-    const { pathname } = useLocation()
     const [dataProject, setDataProject] = useState({})
     const [nextData, setNextData] = useState({})
     const [prevData, setPrevData] = useState({})
     const [atEnd, setAtEnd] = useState(false)
     const [atStart, setAtStart] = useState(true)
     const [images, setImages] = useState([])
+    const [imagesMobile, setImagesMobile] = useState([])
     const [tech, setTech] = useState([])
     const [description, setDescription] = useState('')
-    const { scroll } = useContext(GeneralContext)
     const [content, setContent] = useState(Fragment)
-
+    const { scroll } = useContext(GeneralContext)
 
     const params = props.paramsProject
     const projects = props.projects
 
-    useEffect(() => {
-        window.scrollTo({top: 0, behavior: 'smooth'});
-      }, [pathname]);
     
  
     useEffect(()=> {
         const currentProject = ShowProjects(projects, params, setNextData, setPrevData, setAtEnd, setAtStart)
         setDataProject(currentProject)
         setImages(currentProject.images)
+        setImagesMobile(currentProject.imagesmobile)
         setTech(currentProject.technologies)
         setDescription(currentProject.description)
         unified()
@@ -56,6 +52,7 @@ function WebProject (props) {
             setContent(file.result)
             })    
     },[params,dataProject,images,tech,description])
+
 
 
     return (
@@ -74,12 +71,24 @@ function WebProject (props) {
                         navigation={true}
                         zoom={true}
                         modules={[Pagination, Navigation, Zoom]}
-                        className="mySwiper bg-negro"
+                        className="mySwiper bg-negro hidden tablet:block"
                     >
                         {
-                            dataProject != undefined ? (images.map((s) => <SwiperSlide data-hash={(s)} key={s} zoom='true'><img src={s} width="1280" height="720" /></SwiperSlide>)) : null
+                            dataProject != undefined ? (images.map((s) => <SwiperSlide data-hash={(s)} key={s} zoom='true'><img  src={s} width="1280" height="720" /></SwiperSlide>)) : null
                         }
-
+                    </Swiper>
+                    <Swiper
+                        pagination={{
+                            clickable: true,
+                        }}
+                        navigation={true}
+                        zoom={true}
+                        modules={[Pagination, Navigation, Zoom]}
+                        className="mySwiper bg-negro tablet:hidden"
+                    >
+                        {
+                            dataProject != undefined ? (imagesMobile.map((s) => <SwiperSlide data-hash={(s)} key={s} zoom='true'><img src={s} width="1280" height="720" /></SwiperSlide>)) : null
+                        }
                     </Swiper>
 
                 </div>
@@ -89,7 +98,7 @@ function WebProject (props) {
                 <div className="flex flex-col   tablet:min-h-[21rem] laptop:min-h-[18rem]">
                     <div key={dataProject.opinion} className="desktop:min-h-[9rem] transicioncorta">
                         <div className="text-left">
-                            <img src={dataProject.illustrations} className='w-44 tablet:w-64 float-right ml-6 svg mr-6' />
+                            <img src={dataProject.illustrations} className='w-44 tablet:w-[13rem] float-right ml-4 svg mr-5' />
                         </div>
                         <p className='text-[1rem] font-tommylight tracking-wider antialiased text-justify' >{content}</p>
                         
@@ -109,8 +118,8 @@ function WebProject (props) {
                     </div>
             <div className='flex justify-end min-w-full gap-2'>
                 <div className="w-36 tablet:w-44">
-                    {atStart ? null : <Link to={`/web-projects/${prevData.id ? prevData.id : null}`}>
-                        <button key={dataProject.name} onClick={() => scroll.current.scrollIntoView()}
+                    {atStart ? null : <Link  to={`/web-projects/${prevData.id ? prevData.id : null}`}>
+                        <button key={dataProject.name}  onClick={() => scroll.current.scrollIntoView()}
                             className='tablet:w-44 p-2 w-36 h-12 tablet:h-12 font-tommyregular  tablet:text-xl bg-purpuraclaro rounded-sm hover:bg-purpuralh hover:text-texth'>
                             Previous project
                         </button>
@@ -118,8 +127,8 @@ function WebProject (props) {
                     }
                 </div>
                 <div className="w-36 tablet:w-44">
-                    {atEnd ? null : <Link to={`/web-projects/${nextData.id}`}>
-                        <button key={dataProject.name} onClick={() => scroll.current.scrollIntoView()}
+                    {atEnd ? null : <Link to={`/web-projects/${nextData.id}`} >
+                        <button key={dataProject.name} onClick={() => scroll.current.scrollIntoView()} 
                             className='tablet:w-44 p-2 w-36 h-12 tablet:h-12 font-tommyregular  tablet:text-xl bg-purpuraclaro rounded-sm hover:bg-purpuralh hover:text-texth'>
                             Next project
                         </button>
