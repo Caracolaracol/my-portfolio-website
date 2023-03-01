@@ -35,6 +35,7 @@
 			"description": "This is a Remake of the <a class='text-naranja hover:text-naranjahover' href='https://www.ironplant.cl/' target='_blank' >Ironplant website</a>, a Vegan brand selling food supplements. I did this site for the final project of the React Js bootcamp at Coderhouse, where I learned a lot of my Web Development Skills. In this project you can actually simulate a purchase, it has itemlists, filtered items, item details, cart and a checkout form.",
 			"opinion": "Don't forget your B12!",
 			"images": ["/imagecarousel/ironplant1.png", "/imagecarousel/ironplant2.png"],
+			"illustrations": "/illustrations/rana2.png",
 			"github":"https://github.com/Caracolaracol/ReactJsFinal-coderhouse",
 			"link": "https://reactjsfinal-coderhouse.vercel.app/",
 			"technologies": [
