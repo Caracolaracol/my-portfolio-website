@@ -1,4 +1,4 @@
-import { useEffect, useState, useContext } from "react"
+import { useEffect, useState, useContext, useRef } from "react"
 import { Link, useLocation} from "react-router-dom"
 import * as Tooltip from '@radix-ui/react-tooltip';
 
@@ -13,6 +13,7 @@ import { GeneralContext } from "../context/general-context";
 import { ShowProjects } from "./utils/ShowProjects";
 
 function PostProject (props) {
+    const scroll = useRef()
     const [dataProject, setDataProject] = useState({})
     const [nextData, setNextData] = useState({})
     const [prevData, setPrevData] = useState({})
@@ -21,10 +22,15 @@ function PostProject (props) {
     const [tech, setTech] = useState([])
     const [images, setImages] = useState([])
     const [description, setDescription] = useState('')
-    const { scroll } = useContext(GeneralContext)
 
     const params = props.paramsProject
     const projects = props.projects
+
+    useEffect(() => {
+        console.log(scroll.current)
+        scroll.current && scroll.current.scrollIntoView()
+            window.scroll(0,0)
+    },[dataProject])
 
     useEffect(()=> {
         const currentProject = ShowProjects(projects, params, setNextData, setPrevData, setAtEnd, setAtStart)
@@ -35,20 +41,23 @@ function PostProject (props) {
 },[params,dataProject,images,description])
       
     return (
-        <div>
+        <div  key='top' ref={scroll}>
             <div className="showproject mb-4 tablet:mb-6">
                 <div className="border-b-[1px] border-spacing-2 border-whitem border-opacity-20 mb-6 transicioncorta">
                     <h1 key={dataProject.name} className={`text-xl tablet:text-3xl laptop:text-4xl desktop:text-5xl leading-tight font-tommy min-h-max pl-2 pb-2 transicioncorta`}>{dataProject.name}   </h1>
                 </div>
 
-                <div className="relative w-full h-0 pb-[56.25%] transicioncorta">
-                    <iframe className="absolute top-0 left-0 w-full h-full" src={`https://www.youtube.com/embed/${dataProject.video}`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"></iframe>
+                <div className="bg-[#000] rounded-tr-sm rounded-br-sm bg-opacity-20 p-1 tablet:p-4">
+                    <div className="relative w-full h-0 pb-[62%] tablet:pb-[57.25%] transicioncorta ">
+                        <iframe className="absolute top-0 left-0 w-full h-full" src={`https://www.youtube.com/embed/${dataProject.video}`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"></iframe>
+                    </div>
                 </div>
+                
                 
                 <div className=' min-w-full h-6'>
 
                 </div>
-                <div className="flex justify-between flex-col ">
+                <div className="flex justify-between flex-col bg-[#000] rounded-tr-sm rounded-br-sm bg-opacity-20 p-4">
                     <div key={dataProject.opinion} className="desktop:min-h-[5rem] transicioncorta">
                         <div className='text-[1rem] font-tommylight tracking-wide antialiased'>
                             <div className='text-[1rem] font-tommylight tracking-wide antialiased text-justify' dangerouslySetInnerHTML={{ __html: description }}></div>
@@ -67,7 +76,7 @@ function PostProject (props) {
                     </div>
                 </div>
                 
-                <div className="tablet:flex tablet:justify-between bg-[#000] rounded-tr-sm rounded-br-sm bg-opacity-30 p-4">
+                <div className="tablet:flex tablet:justify-between bg-[#000] rounded-tr-sm rounded-br-sm bg-opacity-20 p-4">
                         <div>
                             <h2 className='font-chrono text-[1.7rem]'>
                                 Tools I used
@@ -115,7 +124,10 @@ function PostProject (props) {
             <div className='flex justify-end min-w-full gap-2'>
                 <div className="w-36 tablet:w-44">
                     {atStart ? null : <Link to={`/post-projects/${prevData.id ? prevData.id : null}`}>
-                        <button key={dataProject.name} onClick={() => scroll.current.scrollIntoView()}
+                        <button key={dataProject.name}  onClick={() => {
+                            console.log(scroll.current)
+                            scroll.current.scrollIntoView()
+                            }}
                             className='tablet:w-44 p-2 w-36 h-12 tablet:h-12 font-tommyregular  tablet:text-xl bg-purpuraclaro rounded-sm hover:bg-purpuralh hover:text-texth'>
                             Previous project
                         </button>
@@ -124,7 +136,10 @@ function PostProject (props) {
                 </div>
                 <div className="w-36 tablet:w-44">
                     {atEnd ? null : <Link to={`/post-projects/${nextData.id}`}>
-                        <button key={dataProject.name} onClick={() => scroll.current.scrollIntoView()} 
+                        <button key={dataProject.name}  onClick={() => {
+                            console.log(scroll.current)
+                            scroll.current.scrollIntoView()
+                            }}
                         className='tablet:w-44 p-2 w-36 h-12 tablet:h-12 font-tommyregular  tablet:text-xl bg-purpuraclaro rounded-sm hover:bg-purpuralh hover:text-texth'>
                             Next project
                         </button>

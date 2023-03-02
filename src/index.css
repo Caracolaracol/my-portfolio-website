@@ -165,9 +165,26 @@ margin-right: auto;
   background-size: auto 100%;
   background-position: center;
 }
+@media screen and (max-width: 400px) {
+  .swiper-button-next {
+    background-size: auto 40%;
+  }
+  .swiper-button-prev {
+    background-size: auto 40%;
+  }
+}
+@media (max-width: 600px) {
+  .swiper-button-next {
+    background-size: auto 70%;
+  }
+  .swiper-button-prev {
+    background-size: auto 70%;
+  }
+}
 .swiper-button-next::after {
   content: '';
 }
+
 
 
 .swiper-button-prev, .swiper-button-next {

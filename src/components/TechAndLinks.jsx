@@ -5,7 +5,7 @@ function TechAndLinks(props) {
 
 
     return (
-        <div className="tablet:flex tablet:justify-between bg-[#000] rounded-tr-sm rounded-br-sm bg-opacity-30 p-4 ">
+        <div className="tablet:flex tablet:justify-between ">
                         <div>
                             <h2 className='font-chrono text-[1.7rem]'>
                                 Technologies i used
