@@ -8,7 +8,7 @@ function TechAndLinks(props) {
         <div className="tablet:flex tablet:justify-between ">
                         <div>
                             <h2 className='font-chrono text-[1.7rem]'>
-                                Technologies i used
+                                {props.lang == 'EN' ? 'Technologies i used' : 'Tecnologías utilizadas'}
                             </h2>
                             <div key={props.tech} className='flex flex-wrap gap-3 transicioncorta'>
                                 {
@@ -45,12 +45,12 @@ function TechAndLinks(props) {
                         <div className="pt-[1.4rem]">
                             <div className="flex justify-end">
                                 <a className='font-tommyregular text-[1.2rem] text-naranja hover:text-naranjahover' href={props.dataProject.github} target='_blank' >
-                                    Github Repository
+                                    {props.lang == 'EN' ? 'Github Repository' : 'Repositorio en Github'}
                                 </a>
                             </div>
                             {props.dataProject.link ? <div className="flex justify-end">
                                 <a className='font-tommyregular text-[1.2rem] text-naranja hover:text-naranjahover' href={props.dataProject.link} target='_blank' >
-                                    Go to the site
+                                    {props.lang == 'EN' ? 'Go to the site' : 'Ver el sitio'}
                                 </a>
                             </div> : null}
 

@@ -1,22 +1,30 @@
+import { useContext } from "react"
 import { NavLink } from "react-router-dom"
+import { GeneralContext } from "../context/general-context"
 import classes from './NavBar.module.css'
 
 function NavBar() {
+    const {language} = useContext(GeneralContext)
+
     const navNames = [
         {
             name: "Web development projects",
+            nameES: "Proyectos de desarrollo Web",
             direccion: "/web-projects"
         },
         {
             name: "Post & Motion Graphics",
+            nameES: "Post & Motion Graphics",
             direccion: '/post-projects'
         },
         {
             name: "Blog",
+            nameES: "Blog",
             direccion: '/blog'
         },
         {
             name: "About",
+            nameES: "Acerca de",
             direccion: '/about'
         },
     ]
@@ -35,7 +43,7 @@ function NavBar() {
                                     isActive ? `${styles} ${classes.active}` : `${styles}`
                                 }
                             >
-                                {s.name}
+                                {language == 'EN' ? s.name : s.nameES}
                             </NavLink>
                         </li>
                     ))

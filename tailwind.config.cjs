@@ -18,7 +18,7 @@ module.exports = {
     colors: {
       // backgrounds
       negro: 'rgb(12,9,19)',
-      negroback: 'rgba(  58, 53, 71  , 0.8)',
+      negroback: 'rgba(58, 53,71,0.8)',
       // components
       purpural: 'rgb( 44, 40, 68 )',
       purpuralh: 'rgb( 65, 57, 113 )',

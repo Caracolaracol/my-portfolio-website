@@ -22,6 +22,7 @@ function PostProject (props) {
     const [tech, setTech] = useState([])
     const [images, setImages] = useState([])
     const [description, setDescription] = useState('')
+    const {language} = useContext(GeneralContext)
 
     const params = props.paramsProject
     const projects = props.projects
@@ -37,14 +38,18 @@ function PostProject (props) {
         setDataProject(currentProject)
         setImages(currentProject.images)
         setTech(currentProject.technologies)
-        setDescription(currentProject.description)
-},[params,dataProject,images,description])
+        if (language == 'EN') {
+            setDescription(currentProject.description)
+        } else {
+            setDescription(currentProject.descriptionES)
+        }
+},[params,dataProject,images,description, language])
       
     return (
         <div  key='top' ref={scroll}>
             <div className="showproject mb-4 tablet:mb-6">
                 <div className="border-b-[1px] border-spacing-2 border-whitem border-opacity-20 mb-6 transicioncorta">
-                    <h1 key={dataProject.name} className={`text-xl tablet:text-3xl laptop:text-4xl desktop:text-5xl leading-tight font-tommy min-h-max pl-2 pb-2 transicioncorta`}>{dataProject.name}   </h1>
+                    <h1 key={dataProject.name} className={`text-xl tablet:text-3xl laptop:text-4xl desktop:text-5xl leading-tight font-tommy min-h-max pl-2 pb-2 transicioncorta`}>{language == 'EN' ? dataProject.name : dataProject.nameES == undefined ? dataProject.name : dataProject.nameES}   </h1>
                 </div>
 
                 <div className="bg-[#000] rounded-tr-sm rounded-br-sm bg-opacity-20 p-1 tablet:p-4">
@@ -63,7 +68,7 @@ function PostProject (props) {
                             <div className='text-[1rem] font-tommylight tracking-wide antialiased text-justify' dangerouslySetInnerHTML={{ __html: description }}></div>
                         </div>
                         <p>
-                            {dataProject.opinion}
+                            {language == 'EN' ? dataProject.opinion : dataProject.opinionES}
                         </p>
                     </div>
                    
@@ -79,7 +84,7 @@ function PostProject (props) {
                 <div className="tablet:flex tablet:justify-between bg-[#000] rounded-tr-sm rounded-br-sm bg-opacity-20 p-4">
                         <div>
                             <h2 className='font-chrono text-[1.7rem]'>
-                                Tools I used
+                                {props.lang == 'EN' ? 'Tools i used' : 'Herramientas utilizadas'}
                             </h2>
                             <div key={tech} className='flex flex-wrap gap-3 transicioncorta'>
                                 {
@@ -129,7 +134,7 @@ function PostProject (props) {
                             scroll.current.scrollIntoView()
                             }}
                             className='tablet:w-44 p-2 w-36 h-12 tablet:h-12 font-tommyregular  tablet:text-xl bg-purpuraclaro rounded-sm hover:bg-purpuralh hover:text-texth'>
-                            Previous project
+                            {language == 'EN' ? 'Previous project' : 'Ver anterior' }
                         </button>
                     </Link>
                     }
@@ -141,7 +146,7 @@ function PostProject (props) {
                             scroll.current.scrollIntoView()
                             }}
                         className='tablet:w-44 p-2 w-36 h-12 tablet:h-12 font-tommyregular  tablet:text-xl bg-purpuraclaro rounded-sm hover:bg-purpuralh hover:text-texth'>
-                            Next project
+                            {language == 'EN' ? 'Next project' : 'Ver siguiente' }
                         </button>
                     </Link>}
                 </div>

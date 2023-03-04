@@ -31,6 +31,7 @@ function WebProject (props) {
     const [tech, setTech] = useState([])
     const [description, setDescription] = useState('')
     const [content, setContent] = useState(Fragment)
+    const {language} = useContext(GeneralContext)
 
     
     const params = props.paramsProject
@@ -48,7 +49,11 @@ function WebProject (props) {
         setImages(currentProject.images)
         setImagesMobile(currentProject.imagesmobile)
         setTech(currentProject.technologies)
-        setDescription(currentProject.description)
+        if (language == 'EN') {
+            setDescription(currentProject.description)
+        } else {
+            setDescription(currentProject.descriptionES)
+        }
         unified()
             .use(rehypeParse,{fragment:true})
             .use(rehypeReact, {createElement, Fragment})
@@ -57,7 +62,7 @@ function WebProject (props) {
             setContent(file.result)
             })  
 
-    },[params,dataProject,images,tech,description])
+    },[params,dataProject,images,tech,description, language])
 
 
 
@@ -68,7 +73,7 @@ function WebProject (props) {
 
             </div>
                 <div className="border-b-[1px] border-spacing-2 border-whitem border-opacity-20 mb-6 transicioncorta flex justify-between">
-                    <h1 key={dataProject.name} className={`text-xl tablet:text-3xl laptop:text-4xl desktop:text-5xl leading-tight font-tommy min-h-max pl-2 pb-2 transicioncorta`}>{dataProject.name}   </h1>
+                    <h1 key={dataProject.name} className={`text-xl tablet:text-3xl laptop:text-4xl desktop:text-5xl leading-tight font-tommy min-h-max pl-2 pb-2 transicioncorta`}>{language == 'EN' ? dataProject.name : dataProject.nameES == undefined ? dataProject.name : dataProject.nameES}   </h1>
                     
                 </div>
 
@@ -114,11 +119,11 @@ function WebProject (props) {
                         
                     </div>
                     <p className='text-[1rem] font-tommyregular tracking-wider antialiased italic'>
-                            {dataProject.opinion}
+                            {language == 'EN' ? dataProject.opinion : dataProject.opinionES}
                         </p>
                     <div className="border-b-[1px] border-whitem border-opacity-20 mt-4 mb-4 desktop:mt-6 desktop:mb-6 w-[80%] flex mx-auto">
                     </div>
-                    <TechAndLinks tech={tech} dataProject={dataProject}/>
+                    <TechAndLinks lang={language} tech={tech} dataProject={dataProject}/>
                 </div>
 
 
@@ -130,7 +135,7 @@ function WebProject (props) {
                     {atStart ? null : <Link  to={`/web-projects/${prevData.id ? prevData.id : null}`}>
                         <button key={dataProject.name}  
                             className='tablet:w-44 p-2 w-36 h-12 tablet:h-12 font-tommyregular  tablet:text-xl bg-purpuraclaro rounded-sm hover:bg-purpuralh hover:text-texth'>
-                            Previous project
+                            {language == 'EN' ? 'Previous project' : 'Ver anterior' }
                         </button>
                     </Link>
                     }
@@ -139,7 +144,7 @@ function WebProject (props) {
                     {atEnd ? null : <Link to={`/web-projects/${nextData.id}`} >
                         <button key={dataProject.name}  
                             className='tablet:w-44 p-2 w-36 h-12 tablet:h-12 font-tommyregular  tablet:text-xl bg-purpuraclaro rounded-sm hover:bg-purpuralh hover:text-texth'>
-                            Next project
+                            {language == 'EN' ? 'Next project' : 'Ver siguiente' }
                         </button>
                     </Link>}
                 </div>

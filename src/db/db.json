@@ -4,9 +4,11 @@
 			"id":"obsidian",
 			"name": "Obsidian",
 			"description": "This is a clone of the <a class='text-naranja hover:text-naranjahover' href='https://obsidian.md/' target='_blank' >Obsidian website</a>, made for improving my developing skills. Obsidian its like a note taking app but with extra features, you can make it a knowledge base for your life, and with his capabilites obsidian its able to work like a second brain for the user. As a developer I find obsidian a really useful tool where I write down my notes, useful codes and basically everything I know I'll need in some future. <br />In this project I made the landing page of the site. I tried to make this page without seeing the original html because I thought that doing it this way would make it harder to clone. It's one of the first web projects that I did.",
+			"descriptionES":"Este es un clon del sitio web <a class='text-naranja hover:text-naranjahover' href='https://obsidian.md/' target='_blank' >Obsidian.md</a>, lo hice para mejorar mi técnica en maquetado web. Obsidian es una app para escribir notas pero con algunas características extra, puedes convertirla en una base de conocimiento para tu estilo de vida y con sus capacidades Obsidian es capaz de convertirse en un segundo cerebro para el usuario. Como desarrollador encuentro a obsidian una herramienta muy util donde escribo mis notas, códigos útiles o básicamente todo lo que sepa y que sé que necesitaré en algún futuro. <br /> Para este proyecto hice la landing page del sitio. Traté de hacer esta página sin ver el HTML porque así sería más dificil de clonar. Es uno de los primeros proyectos que hice.",
 			"opinion": "Obsidian its a software that I like very much, I really recommend you to try it!",
+			"opinionES": "Obsidian es un software que me gusta mucho, te recomiendo usarlo!",
 			"images": ["/imagecarousel/obsidianimage1.png", "/imagecarousel/obsidianimage2.png"],
-			"imagesmobile": ["/imagecarousel/obsidianmobile1.jpg", "/imagecarousel/obsidianmobile2.jpg"],
+			"imagesmobile": ["/imagecarousel/obsidianmobile2.jpg", "/imagecarousel/obsidianmobile1.png"],
 			"illustrations": "/illustrations/ranaobsidian.png",
 			"github": "https://github.com/Caracolaracol/ObsidianProject",
 			"technologies": [
@@ -34,7 +36,9 @@
 			"id": "ironplantcl",
 			"name": "Ironplant.cl",
 			"description": "This is a Remake of the <a class='text-naranja hover:text-naranjahover' href='https://www.ironplant.cl/' target='_blank' >Ironplant website</a>, a Vegan brand selling food supplements. I did this site for the final project of the React Js bootcamp at Coderhouse, where I learned a lot of my Web Development Skills. In this project you can actually simulate a purchase, it has itemlists, filtered items, item details, cart and a checkout form.",
+			"descriptionES": "Este es un remake the la página <a class='text-naranja hover:text-naranjahover' href='https://www.ironplant.cl/' target='_blank' >Ironplant.cl</a>, una marca vegana de suplementos alimenticios. Hice este sitio para el proyecto final del bootcamp de React JS en Coderhouse, donde aprendí gran parte de mis habilidades como desarrollador. En este proyecto podrás simular una compra, con su lista de ítems, filtros de búsqueda, detalle de producto, carrito de compras y finalmente el formulario para el Checkout.",
 			"opinion": "Don't forget your B12!",
+			"opinionES":"Tómate la B12",
 			"images": ["/imagecarousel/ironplant1.png", "/imagecarousel/ironplant2.png"],
 			"imagesmobile": ["/imagecarousel/ironplantmobile1.jpg", "/imagecarousel/ironplantmobile2.jpg"],
 			"illustrations": "/illustrations/rana2.png",
@@ -64,8 +68,11 @@
 		{
 			"id":"myportfolio",
 			"name": "My Portfolio",
+			"nameES": "Mi Portafolio",
 			"description": "This is my portfolio Website, and you are actually here. As you can see, this site contains all my art and web development works and also a blog where I write some stuff of my interest and some tales of mine. It is still in development because this site will be the center of my activity on the internet and in that sense I'll continously update the site with new stuff as I learn to implement new technologies.",
+			"descriptionES": "Te presento mi portafolio, y actualmente estas aquí. Como puedes ver este sitio contiene mi información como desarrollador y como artista. También contiene un blog donde escribiré cosas de interés personal, cuentos, entre otras cosas. Está aún en construcción pero será el centro de mi actividad en internet y en ese sentido seguiré actualizandolo con cosas nuevas mientras aprendo a implementar nuevas tecnologías.",
 			"opinion": "Thanks for being here!",
+			"opinionES":"Gracias por tu visita!",
 			"images": ["/imagecarousel/portfolio1.png", "/imagecarousel/portfolio2.png"],
 			"imagesmobile": ["/imagecarousel/portfoliomobile1.jpg", "/imagecarousel/portfoliomobile2.jpg"],
 			"illustrations": "/illustrations/caracoltecla.png",
@@ -102,8 +109,11 @@
 		{
 			"id": "languagespin",
 			"name": "Language Spin",
+			"nameES": "Language Spin",
 			"description": "This is a language course platform, I worked at this project as a team made up of the best students of the latest bootcamps of web development and web design at 'Coderhouse' an e-learning platform based in Argentina, so it was a excelent job experience and the result was this site made for a language course institute, they teach English, Spanish, Italian and Portuguese",
+			"descriptionES": "Language Spin es una plataforma de cursos de idiomas, trabajé en este proyecto en un equipo conformado por los mejores estudiantes de los últimos bootcamps de desarrollo web y diseño de Coderhouse, una plataforma de e-learning de Argentina. Fué una excelente experiencia laboral cuyo resultado fue este sitio hecho para este instituto de idiomas donde enseñan Inglés, Español, Italiano y Portugués.",
 			"opinion": "Grazie mille!",
+			"opinionES":"Grazie mille!",
 			"images": ["/imagecarousel/obsidianimage1.png", "/imagecarousel/obsidianimage2.png"],
 			"imagesmobile": ["/imagecarousel/obsidianmobile1.jpg", "/imagecarousel/obsidianmobile2.jpg"],
 			"github":"https://github.com/Caracolaracol/languageSpin-project",
@@ -133,8 +143,11 @@
 		{
 			"id": "myfirstsite",
 			"name": "My first Site",
+			"nameES": "Mi primer sitio", 
 			"description": "The first site that I made. I'ts a site about myself as a photographer with a store of prints of macrophotography of insects and a blog.",
+			"descriptionES": "El primer sitio que hice, Es una tienda de fotografías, con un catálogo para comprar prints de fotografía macro.",
 			"opinion": "Proud of it!",
+			"opinionES": "Nada como tu primer proyecto de página web.",
 			"images": ["/imagecarousel/firstsite1.png", "/imagecarousel/firstsite2.png"],
 			"imagesmobile": ["/imagecarousel/firstsitemobile1.jpg", "/imagecarousel/firstsitemobile2.jpg"],
 			
@@ -154,11 +167,11 @@
 				"description": "CSS for the styling"
 				},
 				{
-					"idtech": "sass",
-					"name": "SASS",
-					"img": "/icons/sasscol.svg",
-					"description": "CSS extension for preprocessing the styles in a more eficient way"
-					},
+				"idtech": "sass",
+				"name": "SASS",
+				"img": "/icons/sasscol.svg",
+				"description": "CSS extension for preprocessing the styles in a more eficient way"
+				},
 				{
 				"idtech": "javascript",
 				"name": "Javascript",
@@ -172,8 +185,11 @@
 		{
 			"id":"pokemoncenter",
 			"name": "Pokemon Center",
+			"nameES": "Centro pokemon",
 			"description": "This is a project that I did for the challenges of the Javascript Course at Coderhouse, It is a pokemon center simulator but privatized and it charges a certain amount of money to heal your pokemons. It is made with the pokeAPI, with that I got all the data of your pokemons, including the sprites.",
 			"opinion": "using pokeAPI its a great way to learn to use APIs and fetch data from databases!",
+			"descriptionES": "Hice este simulador para los desafíos del curso de Javascript en Coderhouse, es un simulador de centro pokemon pero privatizado, cobra una cierta cantidad de dinero para sanar a tus pokemon. Está hecho con la pokeAPI, así obtengo toda la data de los pokemons, incluyendo los sprites.",
+			"opinionES":" la pokeAPI es una excelente herramienta para aprender API, data fetch y código asíncrono con javascript.",
 			"images": ["/imagecarousel/centropokemon1.png", "/imagecarousel/centropokemon2.png"],
 			"imagesmobile": ["/imagecarousel/centropokemonmobile1.png", "/imagecarousel/centropokemonmobile2.png"],
 			"github":"https://github.com/Caracolaracol/jsFinal-coderhouse",
@@ -214,7 +230,9 @@
 			"id": "bichos",
 			"name": "Bichos",
 			"description": "This is a music video I made for the band Bichonauta, with bugs nature and destruction. The main idea behind was to make a videocollage made with book clippings and use the illustrations of old books about nature and entomology. This took me 2 years of uninterrupted research and editing of the illustrations. Maybe the main source of those illustrations was the <a class='text-naranja hover:text-naranjahover' href='https://obsidian.md/' target='_blank' >Biodiversity Heritage Library</a>. In adition all these illustrations were animated in After Effects.",
+			"descriptionES": "Video musical hecho para la banda Bichonauta, con bichos, naturaleza y destrucción. La idea principal fué hacer un videocollage hecho con ilustraciones mías y recortes de libros viejos sobre naturaleza y entomología. Me tomó 2 años de investigación y posterior edición de los recortes antes de comenzar con la animación. La mayoría de las plantas y bichos provienen de la <a class='text-naranja hover:text-naranjahover' href='https://obsidian.md/' target='_blank' >Biodiversity Heritage Library</a>. Luego animé los recortes con After Effects. ",
 			"opinion": "One of the hardest works i've done, really dificult to make this video.",
+			"opinionES" : "Uno de los trabajos más difíciles que he realizado.",
 			"images": ["/imagecarousel/obsidianimage1.png", "/imagecarousel/obsidianimage2.png"],
 			"video": "kn46FRoGDuk",
 			"technologies": [
@@ -256,6 +274,7 @@
 			"id": "cruzandorios",
 			"name": "Cruzando Ríos/Saltando Piedras",
 			"description": "This is the first music video I made for the band Bichonauta, made with my friends through a journey to 'El Manzano' an incredible place full of nature. I did the video editing and some camera too. The little friend was handmade by another little friend",
+			"descriptionES": "Este es el primer video musical que hice para la banda Bichonauta, hecho con mis amixs durante un viaje al Manzano, un bello lugar lleno de naturaleza. Hice la edición y algo de cámara también. El amiguito fue hecho a mano por otro amiguito.",
 			"images": ["/imagecarousel/obsidianimage1.png", "/imagecarousel/obsidianimage2.png"],
 			"video": "5IuzqtMDwCk",
 			"technologies": [
