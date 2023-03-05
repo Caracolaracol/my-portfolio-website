@@ -115,7 +115,7 @@
 			"opinion": "Grazie mille!",
 			"opinionES":"Grazie mille!",
 			"images": ["/imagecarousel/obsidianimage1.png", "/imagecarousel/obsidianimage2.png"],
-			"imagesmobile": ["/imagecarousel/obsidianmobile1.jpg", "/imagecarousel/obsidianmobile2.jpg"],
+			"imagesmobile": ["/imagecarousel/obsidianmobile2.jpg", "/imagecarousel/obsidianmobile1.png"],
 			"github":"https://github.com/Caracolaracol/languageSpin-project",
 			"link": "https://language-spin.vercel.app/",
 			"technologies":[
