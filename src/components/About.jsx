@@ -1,8 +1,7 @@
-import { useContext, useEffect } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import fotoyo from '../assets/yo3.jpg'
 import fotoyo2 from '../assets/yo4.jpg'
 import { GeneralContext } from '../context/general-context'
-import { useState, useEffect } from 'react'
 
 function About() {
     const { language } = useContext(GeneralContext)
