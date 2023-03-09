@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react'
 
 function About() {
     const { language } = useContext(GeneralContext)
-    const [ lang, setlang ] = useState('EN')
+    const [ lang, setlang] = useState('EN')
 
     useEffect(() => {
         setlang(language)
