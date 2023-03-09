@@ -292,6 +292,7 @@
 			"id": "lacenaestalista",
 			"name": "La cena está lista",
 			"description": "Another Music Video I made for Bichonauta filmed in the mountains, where mysterious creatures dwell. This time I try some Stop Motion to generate another perception about these little gnomes. They did a great job as actors in this video, and the little friend too.",
+			"descriptionES": "Otro video musical hecho para Bichonauta, fué grabado en las montañas donde habitan misteriosas criaturas. Esta vez utilicé la tecnica de stop motion para generar una percepcion distinta en las escenas de los gnomos, hicieron un gran trabajo como actores",
 			"images": ["/imagecarousel/obsidianimage1.png", "/imagecarousel/obsidianimage2.png"],
 			"video": "xFmuDBHP8Uo",
 			"technologies": [
@@ -313,6 +314,7 @@
 			"id":"quebradaradiocontrol",
 			"name": "Quebrada Radiocontrol",
 			"description": "Quebrada Radiocontrol It's an experimental music group, this is one of the videos we made and it required a lot of work because we filmed at so many places and with so many techniques but the result was worth it.",
+			"descriptionES":"Quebrada Radiocontrol es una banda de música experimental. Este video requirió de mucho trabajo y experimentació, lo grabamos en muchos lugares y con muchas y diversas técnicas.",
 			"images": ["/imagecarousel/obsidianimage1.png", "/imagecarousel/obsidianimage2.png"],
 			"video": "ORB423zdJy8",
 			"technologies": [
@@ -328,6 +330,7 @@
 			"id":"asambleadejueces",
 			"name": "Asamblea de Jueces",
 			"description": "Another video of Quebrada Radiocontrol, a very strange one, Just enjoy.",
+			"descriptionES": "Otro video de Quebrada Radiocontrol, uno muy extraño. ",
 			"images": ["/imagecarousel/obsidianimage1.png", "/imagecarousel/obsidianimage2.png"],
 			"video": "wxx3oMa7NVk",
 			"technologies": [
