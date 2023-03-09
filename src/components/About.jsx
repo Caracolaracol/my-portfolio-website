@@ -1,13 +1,16 @@
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import fotoyo from '../assets/yo3.jpg'
 import fotoyo2 from '../assets/yo4.jpg'
 import { GeneralContext } from '../context/general-context'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 function About() {
     const { language } = useContext(GeneralContext)
     const [ lang, setlang ] = useState('EN')
 
+    useEffect(() => {
+        setlang(language)
+    }, [language])
 
     return (
         <div className="max-w-[45rem] showproject">
