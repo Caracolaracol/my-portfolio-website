@@ -1,14 +1,27 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { NavLink, useLocation } from "react-router-dom";
+import { GeneralContext } from "../context/general-context";
 import classes from './NavBar.module.css'
 
 function SideMenu(props) {
     const [placeData, setPlaceData] = useState('')
+    const [indexVideos, setIndexVideos] = useState('')
+    const [indexWeb, setIndexWeb] = useState('')
+    const { language } = useContext(GeneralContext)
     const { pathname } = useLocation()
     const effect = `first:text-orangeclear`
+
+    
     useEffect(() => {
         setPlaceData(props.projects)
-    },[])
+        if (language == 'EN') {
+            setIndexVideos('Index of Videos')
+            setIndexWeb('Index of Projects')
+        } else if (language == 'ES')  {
+            setIndexVideos('Indice de Videos')
+            setIndexWeb('Proyectos web')
+        }
+    },[language])
 
 
     const list = (effect) => {
@@ -25,7 +38,7 @@ function SideMenu(props) {
     return (
         <div className='hidden showindex laptop:block  w-48 h-[24.8rem] laptop:w-[22vw] desktop:w-[19rem] fixed laptop:top-[11.4rem] desktop:top-[11.9rem] left-0'>
             <div className="pl-4 pb-4 bg-[#000] rounded-tr-sm rounded-br-sm bg-opacity-30">
-                <h2 className="font-chrono text-xl antialiased tracking-wider">{props.location == '/post-projects' ? 'Index of videos' : props.location == '/web-projects' ? 'Index of projects' : props.location == '/blog' ? 'Blog Entries' : props.location == '/about' ? 'Links' : ''}</h2>
+                <h2 className="font-chrono text-xl antialiased tracking-wider">{props.location == '/post-projects' ? indexVideos : props.location == '/web-projects' ? indexWeb : props.location == '/blog' ? 'Blog Entries' : props.location == '/about' ? 'Links' : ''}</h2>
                 <div>
                     {
                         pathname == '/web-projects' || pathname == '/post-projects' || pathname == '/blog' ? (
