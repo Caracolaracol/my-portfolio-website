@@ -1,8 +1,9 @@
-import { useEffect, useState, useRef} from "react"
+import { useEffect, useState, useRef, useContext} from "react"
 import { Link } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 import { ShowProjects } from "./utils/ShowProjects";
 import "../index.css";
+import { GeneralContext } from "../context/general-context";
 
 
 function BlogEntry(props) {
@@ -13,6 +14,7 @@ function BlogEntry(props) {
     const [atEnd, setAtEnd] = useState(false)
     const [atStart, setAtStart] = useState(true)
     const [content, setContent] = useState('')
+    const {language} = useContext(GeneralContext)
 
     const params = props.paramsProject
     const projects = props.projects
@@ -56,7 +58,7 @@ function BlogEntry(props) {
                             scroll.current.scrollIntoView()
                             }}
                                     className='tablet:w-44 p-2 w-36 h-12 tablet:h-12 font-tommyregular  tablet:text-xl bg-purpuraclaro rounded-sm hover:bg-purpuralh hover:text-texth'>
-                                    Next Entry
+                                    {language == 'EN' ? 'Next Entry' :  'Siguente post'}
                                 </button>
                             </Link>
                         }
@@ -68,7 +70,7 @@ function BlogEntry(props) {
                             scroll.current.scrollIntoView()
                             }}
                                 className='tablet:w-44 p-2 w-36 h-12 tablet:h-12 font-tommyregular  tablet:text-xl bg-purpuraclaro rounded-sm hover:bg-purpuralh hover:text-texth'>
-                                Previous Entry
+                                {language == 'EN' ? 'Previous Entry' :  'Previo post'}
                             </button>
                         </Link>
                         }
